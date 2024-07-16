@@ -3,27 +3,21 @@ import {
     initCourseInfo,
     getSpecialValue,
 } from "./College"
-import { Course, UserInfo } from "./College/type.ts"
-import { asyncUpdate, retryRequests, sleep } from "./util/index.ts"
-// import { asyncUpdate } from "./util/index.ts"
+import { Course } from "./College/type.ts"
+import { retryRequests, sleep } from "./util/index.ts"
 
 process.on("uncaughtException", (error) => {
     console.error("Uncaught exception:", error.stack)
 })
 
 const main = async () => {
-    const info: UserInfo = {
-        cookie: await initCookie(),
-        specialValue: {
-            
-        },
-    }
+    let cookie = await initCookie()
 
     let courses: Course[] = []
 
     let statusCode;
     // eslint-disable-next-line prefer-const
-    [statusCode, info.cookie] = await login("15104410023", "Zrc_20050905", info.cookie)
+    [statusCode, cookie] = await login("15104410023", "Zrc_20050905", cookie)
 
     if (statusCode !== "登录成功") {
         throw new Error("登录失败")
@@ -31,13 +25,13 @@ const main = async () => {
 
     console.log("登录成功");
 
-    [courses, info.cookie] = await getCourseList(info.cookie)
+    [courses, cookie] = await getCourseList(cookie)
     courses = courses.slice(3, 6)
 
     courses = await courses.reduce(async (prevRes, item: Course) => {
         const prev = await prevRes
 
-        const specialValue = await retryRequests(10, getSpecialValue, [item, info.cookie], [400, 404])
+        const specialValue = await retryRequests(() => getSpecialValue(item, cookie))
         await sleep(500)
         return [...prev, { ...item, specialValue }]
     }, Promise.resolve([] as Course[]))
@@ -50,7 +44,7 @@ const main = async () => {
     
     courses = await courses.reduce(async (prevRes, item: Course) => {
         const res = await prevRes
-        const [newItem] = await initCourseInfo(item, info.cookie)
+        const [newItem] = await initCourseInfo(item, cookie)
         sleep(500)
         return [...res, newItem]
     }, Promise.resolve([] as Course[]))

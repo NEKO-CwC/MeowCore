@@ -29,34 +29,29 @@ export const asyncUpdate = async <T>(raw: T[], func: (item: T) => Promise<T>, de
     return res
 }
 
-export const INFO = (message: string) => {
-    console.log(`INFO: ${message}`)
+export const defaultErrorDeal = (error: any, attempt: number, cause: any) => {
+    if (axios.isAxiosError(error) && [400, 404].indexOf(error.response?.status as number) !== -1) {
+        console.log(`正在重试第${attempt}次`)
+        // eslint-disable-next-line no-return-assign
+        return attempt += 1
+    } 
+    throw new Error("未知错误", { cause })
 }
 
-export const WARN = (message: string) => {
-    console.log(`WARN: ${message}`)
-}
-
-export const ERROR = (message: string) => {
-    console.log(`ERROR: ${message}`)
-}
-
-export const retryRequests = async <T>(maxTryTimes: number, func: (...args: any[]) => Promise<T>, args: any[], exceptCode: number[]): Promise<T> => {
-    let attempts = 0
-    let res:T
-    while (attempts <= maxTryTimes) {
+export const retryRequests = async <T>(
+    callback: () => Promise<T> | T,
+    errorDeal: (error: any, attempt: number, cause: any) => number = defaultErrorDeal,
+    maxTryTimes = 10,
+    delay = 500,
+): Promise<T> => {
+    let attempt = 0
+    while (attempt < maxTryTimes) {
         try {
-            res = await func(...args)
-            return res
+            return await callback()
         } catch (error) {
-            attempts += 1
-            if (axios.isAxiosError(error) && exceptCode.includes(error.response?.status as number)) {
-                console.warn(`${func.name} 第 ${attempts} 次尝试失败`)
-            } else {
-                console.error((error as Error).message)
-                throw new Error("出现未知错误，强制停止执行")
-            }
+            attempt = errorDeal(error, attempt)
         }
+        await sleep(delay)
     }
     throw new Error("达到最大重试次数")
 }

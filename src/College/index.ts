@@ -13,7 +13,7 @@ import {
     rawEvent,
     SpecialValue,
 } from "./type.ts"
-import { formatCourseEventAttachment } from "./format/json.ts"
+import { formatCourseEventAttachment, formatCourseEvent } from "./format/json.ts"
 import {
     parseCourseHTML, parseHomeworkHTML, parseSpecialValue, 
 } from "./format/html.ts"
@@ -181,6 +181,7 @@ export const getCourseList = async (cookie: CollegeCookie): Promise<[Course[], C
     return [res, rseCookie]
 }
 
+// 获取任务详细信息
 export const getEventDetail = async (event: CourseEvent, cookie: CollegeCookie): Promise<CourseEvent> => {
     if (event.type === "签到") {
         const res = event as CourseEventSignIn
@@ -192,7 +193,10 @@ export const getEventDetail = async (event: CourseEvent, cookie: CollegeCookie):
         const res = event as CourseEventNotice
         
         const { url } = res
-        const detail = {
+        const detail: {
+            detailContent: string
+            attachment: CourseEventAttachment[]
+        } = {
             detailContent: "",
             attachment: [],
         }
@@ -206,11 +210,17 @@ export const getEventDetail = async (event: CourseEvent, cookie: CollegeCookie):
         }
     
         if (data.msg.rtf_content !== undefined) {
-            return { ...res, title }
+            detail.detailContent = data.msg.rtf_content
+        } else {
+            detail.detailContent = data.msg.content
         }
     
-        return [data.msg.content, attachment]
+        res.detail = detail
+
+        return res as CourseEventNotice
     }
+
+    throw new Error("获取事件详细信息失败")
 }
 
 // TODO: 文件在线预览
@@ -258,20 +268,9 @@ export const getCourseEvents = async (course: Course, cookie: CollegeCookie): Pr
 
     console.log(data.data.activeList)
 
-    const events = await data.data.activeList.reduce(async (prevRes, event): Promise<CourseEvent[]> => {
-        const prev = await prevRes
-        const [content, attachment] = await getEventDetail(event.content, cookie)
-        return [...prev, {
-            startTime: event.startTime,
-            endTime: event.endTime,
-            title: event.nameOne,
-            briefContent: content,
-            finished: Date.now() > event.endTime,
-            attachment,
-        }]
-    }, Promise.resolve([] as CourseEvent[]))
+    const res = data.data.activeList.reduce((prev: CourseEvent[], rawEvent: rawEvent): CourseEvent[] => [...prev, formatCourseEvent(rawEvent)], [] as CourseEvent[])
 
-    return [events, cookie]
+    return [res, cookie]
 }
 
 export const getCourseHomework = async (course: Course, cookie: CollegeCookie): Promise<[CourseHomework[], CollegeCookie]> => {
@@ -291,8 +290,8 @@ export const getCourseHomework = async (course: Course, cookie: CollegeCookie): 
 }
 
 export const initCourseInfo = async (course: Course, cookie: CollegeCookie): Promise<[Course, CollegeCookie]> => {
-    const [resEvent] = await retryRequests(10, getCourseEvents, [course, cookie], [404])
-    const [resHomework] = await retryRequests(10, getCourseHomework, [course, cookie], [404])
+    const [resEvent] = await retryRequests<[CourseEvent[], CollegeCookie]>(() => getCourseEvents(course, cookie))
+    const [resHomework] = await retryRequests<[CourseHomework[], CollegeCookie]>(() => getCourseHomework(course, cookie))
 
     course.events = resEvent
     course.homework = resHomework

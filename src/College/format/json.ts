@@ -17,7 +17,7 @@ export const formatCourseEventAttachment = (raw: string): CourseEventAttachment[
     return res
 }
 
-export const formatCourseEvents = (raw: rawEvent) => {
+export const formatCourseEvent = (raw: rawEvent) => {
     const res: CourseEvent = {
         type: "未知",
         startTime: raw.startTime as number,
@@ -44,4 +44,6 @@ export const formatCourseEvents = (raw: rawEvent) => {
             briefContent,
         } as CourseEventNotice
     }
+    
+    throw new Error("不合法的输入")
 }
