@@ -1,23 +1,43 @@
+import path from "path"
+import * as fs from "fs/promises"
 import {
-    getCourseList, initCookie, login,
+    getCourseList, login,
     initCourseInfo,
     getSpecialValue,
+    initUser,
+    loadUserInfo,
+    dumpUserInfo,
 } from "./College"
-import { Course } from "./College/type.ts"
-import { retryRequests, sleep } from "./util/index.ts"
+import { Course } from "./College/interface.ts"
+import { ensureFileExist, retryRequests, sleep } from "./util/index.ts"
 
-process.on("uncaughtException", (error) => {
-    console.error("Uncaught exception:", error.stack)
-})
+// process.on('unhandledRejection', (reason, promise) => {
+//     console.error('Unhandled Rejection at:', promise, 'reason:', reason);
+//     // 不退出程序
+//     // process.exit(1); // 如果需要退出程序，可以取消注释这行
+// });
 
 const main = async () => {
-    let cookie = await initCookie()
+    const userName = "NEKO"
+    const userContentPath = `./data/${userName}.json`
+    await ensureFileExist(userContentPath)
+    const localUserInfo = await loadUserInfo(userContentPath)
+    console.log(Object.keys(localUserInfo).length)
+    const user = Object.keys(localUserInfo).length !== 0 ? localUserInfo : await initUser(
+        {
+            name: userName,
+            contentPath: path.join(process.cwd(), `./data/${userName}.json`), 
+        },
+    )
+    
+    process.on("exit", (code) => {
+        dumpUserInfo(userContentPath, user)
+        console.log("程序退出，退出代码为：", code)
+    })
 
-    let courses: Course[] = []
-
-    let statusCode;
+    let statusCode
     // eslint-disable-next-line prefer-const
-    [statusCode, cookie] = await login("15104410023", "Zrc_20050905", cookie)
+    [statusCode, user.chaoxing.cookie] = await login("15104410023", "Zrc_20050905", user.chaoxing.cookie)
 
     if (statusCode !== "登录成功") {
         throw new Error("登录失败")
@@ -25,13 +45,13 @@ const main = async () => {
 
     console.log("登录成功");
 
-    [courses, cookie] = await getCourseList(cookie)
-    courses = courses.slice(3, 6)
+    [user.chaoxing.courses, user.chaoxing.cookie] = await getCourseList(user.chaoxing.cookie)
+    user.chaoxing.courses = user.chaoxing.courses.slice(3, 6)
 
-    courses = await courses.reduce(async (prevRes, item: Course) => {
+    user.chaoxing.courses = await user.chaoxing.courses.reduce(async (prevRes, item: Course) => {
         const prev = await prevRes
 
-        const specialValue = await retryRequests(() => getSpecialValue(item, cookie))
+        const specialValue = await retryRequests(() => getSpecialValue(item, user.chaoxing.cookie))
         await sleep(500)
         return [...prev, { ...item, specialValue }]
     }, Promise.resolve([] as Course[]))
@@ -40,20 +60,26 @@ const main = async () => {
 
     // let testCourse = courses.pop() as Course
 
-    // [testCourse] = await initCourseInfo(testCourse, info.cookie)
+    // [testCourse] = await initCourseInfo(testCourse, info.user.chaoxing.cookie)
     
-    courses = await courses.reduce(async (prevRes, item: Course) => {
+    user.chaoxing.courses = await user.chaoxing.courses.reduce(async (prevRes, item: Course) => {
         const res = await prevRes
-        const [newItem] = await initCourseInfo(item, cookie)
+        const [newItem] = await initCourseInfo(item, user.chaoxing.cookie)
         sleep(500)
         return [...res, newItem]
     }, Promise.resolve([] as Course[]))
     
-    console.log(courses)
+    console.log(user.chaoxing.courses)
+
+    Promise.all([fs.writeFile("./data/NEKO.json", "{}")])
+    // await dumpUserInfo(userContentPath, user)
+    // await fs.writeFile(userContentPath, "{}")
+    // await sleep(10000)
 }
 
-try {
-    main()
-} catch (error) {
-    console.log(error)
+const writeFile = async () => {
+    Promise.all([fs.writeFile("./data/NEKO.json", "test")])
 }
+    
+main()
+// writeFile()

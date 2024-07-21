@@ -1,6 +1,6 @@
 import * as cheerio from "cheerio"
 import { formatUrlQueryToRecord } from "../../../src/util/requests"
-import { Course, CourseHomework, SpecialValue } from "../type"
+import { Course, CourseHomework, SpecialValue } from "../interface"
 
 export const parseCourseHTML = (courseHTML: string): Course[] => {
     const $ = cheerio.load(courseHTML)

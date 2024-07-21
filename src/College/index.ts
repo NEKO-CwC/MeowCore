@@ -1,18 +1,20 @@
 import axios from "axios"
-import { prev } from "cheerio/lib/api/traversing"
-import { asyncUpdate, retryRequests, sleep } from "../util/index.ts"
+import * as fs from "fs/promises"
+import { retryRequests } from "../util/index.ts"
 import {
     generateConfig, generateCookieString, updateCookie, 
 } from "../util/requests.ts"
 import { encryptByAES } from "./chaoxing/crypto.ts"
 import {
-    CollegeCookie, Course, CourseEvent, CourseEvent_signIn, CourseEventAttachment,
+    ChaoxingUser,
+    CollegeCookie, Config, Course, CourseEvent, CourseEventAttachment,
     CourseEventNotice,
     CourseEventSignIn,
     CourseHomework,
     rawEvent,
     SpecialValue,
-} from "./type.ts"
+    User,
+} from "./interface.ts"
 import { formatCourseEventAttachment, formatCourseEvent } from "./format/json.ts"
 import {
     parseCourseHTML, parseHomeworkHTML, parseSpecialValue, 
@@ -24,6 +26,16 @@ export const initCookie = async (): Promise<CollegeCookie> => ({
     chaoxing: {},
     mooc: {},
 })
+
+export const initUser = async (config: Config): Promise<User> => (
+    {
+        config,
+        chaoxing: {
+            cookie: await initCookie(),
+            courses: [],
+        } as ChaoxingUser, 
+    }
+)
 
 export const login = async (uid: string, pwd: string, cookie: CollegeCookie)
     : Promise<[string, CollegeCookie]> => {
@@ -40,7 +52,7 @@ export const login = async (uid: string, pwd: string, cookie: CollegeCookie)
         doubleFactorLogin: "0",
         independentId: "0",
         independentNameId: "0",
-    }
+    }    
 
     const formData = new URLSearchParams(requestBody).toString()
 
@@ -268,7 +280,7 @@ export const getCourseEvents = async (course: Course, cookie: CollegeCookie): Pr
 
     console.log(data.data.activeList)
 
-    const res = data.data.activeList.reduce((prev: CourseEvent[], rawEvent: rawEvent): CourseEvent[] => [...prev, formatCourseEvent(rawEvent)], [] as CourseEvent[])
+    const res = data.data.activeList.reduce((prev: CourseEvent[], raw: rawEvent): CourseEvent[] => [...prev, formatCourseEvent(raw)], [] as CourseEvent[])
 
     return [res, cookie]
 }
@@ -298,3 +310,16 @@ export const initCourseInfo = async (course: Course, cookie: CollegeCookie): Pro
 
     return [course, cookie]
 }
+
+export const loadUserInfo = async (path: string): Promise<User> => {
+    const content = await fs.readFile(path, "utf-8")
+    return JSON.parse(content) as User
+}
+
+export const dumpUserInfo = async (path: string, content: User): Promise<void> => {
+    await fs.writeFile(path, JSON.stringify(content))
+}
+
+// export const autoDumpUserInfo = async (path: string, content: User): Promise<string> => {
+
+// }

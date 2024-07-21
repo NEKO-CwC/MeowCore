@@ -1,4 +1,5 @@
 import axios from "axios"
+import * as fs from "fs/promises"
 
 export function sleep(ms: number) {
     return new Promise((resolve) => { setTimeout(resolve, ms) })
@@ -40,7 +41,7 @@ export const defaultErrorDeal = (error: any, attempt: number, cause: any) => {
 
 export const retryRequests = async <T>(
     callback: () => Promise<T> | T,
-    errorDeal: (error: any, attempt: number, cause: any) => number = defaultErrorDeal,
+    errorDeal: (error: any, attempt: number, cause?: any) => number = defaultErrorDeal,
     maxTryTimes = 10,
     delay = 500,
 ): Promise<T> => {
@@ -54,6 +55,21 @@ export const retryRequests = async <T>(
         await sleep(delay)
     }
     throw new Error("达到最大重试次数")
+}
+
+export const ensureFileExist = async (path: string): Promise<void> => {
+    try {
+        await fs.access(path)
+    } catch (error) {
+        let defaultValue = ""
+        const ext = path.split(".").at(-1)
+        if (ext === "json") {
+            defaultValue = "{}"
+        }
+        if ((error as NodeJS.ErrnoException).code === "ENOENT") {
+            await fs.writeFile(path, defaultValue)
+        }
+    }
 }
 
 // export const sleepTaskList = async (ms: number) => {

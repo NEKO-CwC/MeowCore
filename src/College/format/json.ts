@@ -1,7 +1,7 @@
 import {
     CourseEventAttachment, rawEvent, CourseEvent, CourseEventSignIn,
     CourseEventNotice, 
-} from "../type"
+} from "../interface"
 
 export const formatCourseEventAttachment = (raw: string): CourseEventAttachment[] => {
     const json = JSON.parse(raw)

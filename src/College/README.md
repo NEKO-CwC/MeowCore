@@ -20,4 +20,3 @@ let cookie = initCookie()
 ```
 
 ### 课程相关信息部分
-
