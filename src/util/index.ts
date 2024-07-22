@@ -1,4 +1,4 @@
-import axios from "axios"
+import axios, { AxiosRequestConfig, AxiosResponse } from "axios"
 import * as fs from "fs/promises"
 
 export function sleep(ms: number) {
@@ -71,6 +71,28 @@ export const ensureFileExist = async (path: string): Promise<void> => {
         }
     }
 }
+
+export const onceRedirectRequest = async (method: Function, url: string, rawConfig?: AxiosRequestConfig<any>, redirectConfig?: AxiosRequestConfig<any>) => {
+    let _rawConfig = rawConfig
+
+    if (_rawConfig?.maxRedirects !== 0) {
+        _rawConfig = { ..._rawConfig, maxRedirects: 0 }
+    }
+
+    try {
+        await method(url, _rawConfig)
+    } catch (error) {
+        if (!(axios.isAxiosError(error) && error.response?.status === 302)) {
+            throw error
+        }
+
+        if (!error.response?.headers?.location) {
+            throw new Error("没有 Location ，可能是别的报错")
+        }
+
+        return method(error.response?.headers.location, redirectConfig)
+    }
+} 
 
 // export const sleepTaskList = async (ms: number) => {
 //     return 

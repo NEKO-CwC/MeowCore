@@ -31,11 +31,17 @@ export interface CourseEventSignIn {
 
 export type CourseEvent = CourseEventNotice | CourseEventSignIn
 
+export interface CourseHomeworkDetail {
+    detailContent: string,
+    attachment: CourseEventAttachment[]
+}
+
 export interface CourseHomework {
     url: string
     title: string
     remainTime: string
     status: string
+    detail: CourseHomeworkDetail
 }
 
 export interface CourseExam {
@@ -93,9 +99,10 @@ export interface ChaoxingUser {
 export interface Config {
     name: string
     contentPath: string
+    mode: string
 }
 
 export interface User {
     config: Config
-    chaoxing: ChaoxingUser
+    xxt: ChaoxingUser
 }

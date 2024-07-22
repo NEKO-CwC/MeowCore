@@ -1,6 +1,8 @@
 import * as cheerio from "cheerio"
 import { formatUrlQueryToRecord } from "../../../src/util/requests"
-import { Course, CourseHomework, SpecialValue } from "../interface"
+import {
+    Course, CourseEventAttachment, CourseHomework, CourseHomeworkDetail, SpecialValue, 
+} from "../interface"
 
 export const parseCourseHTML = (courseHTML: string): Course[] => {
     const $ = cheerio.load(courseHTML)
@@ -15,7 +17,8 @@ export const parseCourseHTML = (courseHTML: string): Course[] => {
         const queryRecord = formatUrlQueryToRecord(url)
         const classId = parseInt(queryRecord.clazzid, 10) 
         const courseId = parseInt(queryRecord.courseid, 10) 
-        if (courseElement.find(".not-open-tip")) {
+        if (courseElement.find(".not-open-tip").html()) {
+            console.log(courseElement.find(".not-open-tip"))
             finished = true
         }
         const name = courseElement.find(".course-name").attr("title")
@@ -100,4 +103,25 @@ export const parseHomeworkHTML = (html: string): CourseHomework[] => {
     })
 
     return res
+}
+
+export const parseHomeworkDetailHTML = (html: string): CourseHomeworkDetail => {
+    const $ = cheerio.load(html)
+
+    if ($("title").text() !== "查看详情") {
+        throw new Error("html 字符串格式返回有误")
+    }
+
+    const attachment: CourseEventAttachment[] = []
+
+    $(".attach-iframe").each((_, ele) => {
+        const element = $(ele)
+        attachment.push({
+            downPath: `https://mooc1.chaoxing.com/mooc-ans/ueditorupload/read?objectId=${element.attr("objectid")}`,
+            name: element.attr("filename") as string,
+            suffix: element.attr("filename")!.split(".").at(-1) as string, 
+        })
+    })
+
+    return { detailContent: $(".mark_item").html() as string, attachment }
 }

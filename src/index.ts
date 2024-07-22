@@ -23,15 +23,16 @@ const main = async () => {
     const localUserInfo = await loadUserInfo(userContentPath)
     console.log(Object.keys(localUserInfo).length)
     const user = Object.keys(localUserInfo).length !== 0 ? localUserInfo : await initUser(
-        {
-            name: userName,
-            contentPath: path.join(process.cwd(), `./data/${userName}.json`), 
-        },
+        userName,
+        path.join(process.cwd(), `./data/${userName}.json`), 
     )
+
+    console.log(user.config.mode)
+
 
     let statusCode: string
     // eslint-disable-next-line prefer-const
-    [statusCode, user.chaoxing.cookie] = await login("15104410023", "Zrc_20050905", user.chaoxing.cookie)
+    [statusCode, user.xxt.cookie] = await login("15104410023", "Zrc_20050905", user)
 
     if (statusCode !== "登录成功") {
         throw new Error("登录失败")
@@ -39,31 +40,29 @@ const main = async () => {
 
     console.log("登录成功");
 
-    [user.chaoxing.courses, user.chaoxing.cookie] = await getCourseList(user.chaoxing.cookie)
-    user.chaoxing.courses = user.chaoxing.courses.slice(3, 6)
+    [user.xxt.courses, user.xxt.cookie] = await getCourseList(user)
+    console.log("🚀 ~ main ~ user.xxt.courses:", user.xxt.courses)
+    // user.xxt.courses = user.xxt.courses.slice(3, 6)
+    // user.xxt.courses = await user.xxt.courses.reduce(async (prevRes, item: Course) => {
+    //     const prev = await prevRes
 
-    user.chaoxing.courses = await user.chaoxing.courses.reduce(async (prevRes, item: Course) => {
-        const prev = await prevRes
+    //     const specialValue = await retryRequests(() => getSpecialValue(item, user))
+    //     await sleep(500)
+    //     return [...prev, { ...item, specialValue }]
+    // }, Promise.resolve([] as Course[]))
 
-        const specialValue = await retryRequests(() => getSpecialValue(item, user.chaoxing.cookie))
-        await sleep(500)
-        return [...prev, { ...item, specialValue }]
-    }, Promise.resolve([] as Course[]))
+    // console.log("初始化完成")
 
-    console.log("初始化完成")
+    // // let testCourse = courses.pop() as Course
 
-    // let testCourse = courses.pop() as Course
-
-    // [testCourse] = await initCourseInfo(testCourse, info.user.chaoxing.cookie)
+    // // [testCourse] = await initCourseInfo(testCourse, info.user.chaoxing.cookie)
     
-    user.chaoxing.courses = await user.chaoxing.courses.reduce(async (prevRes, item: Course) => {
-        const res = await prevRes
-        const [newItem] = await initCourseInfo(item, user.chaoxing.cookie)
-        sleep(500)
-        return [...res, newItem]
-    }, Promise.resolve([] as Course[]))
-    
-    console.log(user.chaoxing.courses)
+    // user.xxt.courses = await user.xxt.courses.reduce(async (prevRes, item: Course) => {
+    //     const res = await prevRes
+    //     const [newItem] = await initCourseInfo(item, user)
+    //     sleep(500)
+    //     return [...res, newItem]
+    // }, Promise.resolve([] as Course[]))
 
     await dumpUserInfo(userContentPath, user)
 }
