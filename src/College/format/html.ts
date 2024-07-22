@@ -7,8 +7,8 @@ export const parseCourseHTML = (courseHTML: string): Course[] => {
     const courses: Course[] = []
 
     $(".course-info").each((_, element) => {
-        let startTime = ""
-        let endTime = ""
+        let startTime = 0
+        let endTime = 0
         let finished = false
         const courseElement = $(element)
         const url: string = courseElement.find("a").attr("href") as string
@@ -21,8 +21,11 @@ export const parseCourseHTML = (courseHTML: string): Course[] => {
         const name = courseElement.find(".course-name").attr("title")
         const teacher = courseElement.find(".color3").attr("title")
         if (courseElement.find("p").last().text().indexOf("开课时间") !== -1) {
-            startTime = courseElement.find("p").last().text().split("～")[0].replace("开课时间：", "").trim()
-            endTime = courseElement.find("p").last().text().split("～")[1].trim()
+            startTime = Date.parse(courseElement.find("p").last().text().split("～")[0].replace("开课时间：", "").trim())
+            endTime = Date.parse(courseElement.find("p").last().text().split("～")[1].trim())
+            if (endTime < Date.now()) {
+                finished = true
+            }
         }
         courses.push({
             name,
@@ -30,8 +33,8 @@ export const parseCourseHTML = (courseHTML: string): Course[] => {
             url,
             classId,
             courseId,
-            startTimeString: startTime,
-            endTimeString: endTime,
+            startTime,
+            endTime,
             finished,
             events: [],
             homework: [],

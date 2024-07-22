@@ -1,5 +1,4 @@
 import path from "path"
-import * as fs from "fs/promises"
 import {
     getCourseList, login,
     initCourseInfo,
@@ -29,13 +28,8 @@ const main = async () => {
             contentPath: path.join(process.cwd(), `./data/${userName}.json`), 
         },
     )
-    
-    process.on("exit", (code) => {
-        dumpUserInfo(userContentPath, user)
-        console.log("程序退出，退出代码为：", code)
-    })
 
-    let statusCode
+    let statusCode: string
     // eslint-disable-next-line prefer-const
     [statusCode, user.chaoxing.cookie] = await login("15104410023", "Zrc_20050905", user.chaoxing.cookie)
 
@@ -71,15 +65,7 @@ const main = async () => {
     
     console.log(user.chaoxing.courses)
 
-    Promise.all([fs.writeFile("./data/NEKO.json", "{}")])
-    // await dumpUserInfo(userContentPath, user)
-    // await fs.writeFile(userContentPath, "{}")
-    // await sleep(10000)
+    await dumpUserInfo(userContentPath, user)
 }
 
-const writeFile = async () => {
-    Promise.all([fs.writeFile("./data/NEKO.json", "test")])
-}
-    
 main()
-// writeFile()

@@ -63,8 +63,8 @@ export interface Course {
     courseId: number
     courseCount: number
     courseFinish: number
-    startTimeString: string
-    endTimeString: string
+    startTime: number
+    endTime: number
     finished: boolean
     events: CourseEvent[]
     homework: CourseHomework[]

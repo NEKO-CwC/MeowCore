@@ -1,0 +1,130 @@
+{
+    "config": {
+        "name": "NEKO",
+        "contentPath": "F:\\.PROJECT\\MeowBot\\.CORE\\data\\NEKO.json"
+    },
+    "chaoxing": {
+        "cookie": {
+            "chaoxing": {
+                "JSESSIONID": "F0CB292D47046C478D086B4F14DEB9B7",
+                "lv": "1",
+                "fid": "262",
+                "_uid": "291751624",
+                "uf": "da0883eb5260151ebad3d6695970ad177454b136db54abef4c92f35d0e7ff9d88774b85c2595e7b4f28dbce55104daedc49d67c0c30ca5047c5a963e85f110998c7ce50fab91a502fd68be96b6183b1a0be07017333ca4bc8e4d56fd6e6f74a7f0d43407f1df07c0",
+                "_d": "1721613124945",
+                "UID": "291751624",
+                "vc": "DEB0B06F4DCD688E3E1989AE3E8F4C58",
+                "vc2": "5B77207EF310A1F6245AF3BF28B1B4B9",
+                "vc3": "B86goMuciBshM7aRKeCgkUbTwj2jfem6gxOQ%2BX99InyRn67HwrRqJZ0fE34wq7srvvTVtg5mywBo6v%2Fn%2Flok4r3ea1a8UkEl8%2Bg%2BwJtp0HSys9Y9BdsLnVQfIR8He%2BBTLA%2FbdfYBL5l0u7u4fAnOiNcdm8s3giw7g8%2FXjRc2RCo%3D6688b1fd281b4b222ecb4256b487d445",
+                "cx_p_token": "a8a0ed8e1011a67f205ebf65318e179a",
+                "p_auth_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiIyOTE3NTE2MjQiLCJsb2dpblRpbWUiOjE3MjE2MTMxMjQ5NDcsImV4cCI6MTcyMjIxNzkyNH0.G4gsUWa9DYi_Q3M5fc7Tj58VoT8KI1NNb5vMCAhJLbs",
+                "xxtenc": "2fab2ee9047a79e94f3bc3fd37f142cd",
+                "DSSTASH_LOG": "C_38-UN_1233-US_291751624-T_1721613124947",
+                "route": "52ffa9af7a380e114204ed76732d509c"
+            },
+            "mooc": {
+                "k8s": "1721613126.244.4184.450628",
+                "jrose": "F7BC3CF3DE9DCFFC0E0561C50A339011.mooc2-3296937055-lg286",
+                "route": "c010ccedb771f8b7c7793c67ee1d2aae"
+            }
+        },
+        "courses": [
+            {
+                "name": "【24春】体育（2）",
+                "teacher": "刘健",
+                "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=243479604&clazzid=99234237&cpi=336581293&ismooc2=1",
+                "classId": 99234237,
+                "courseId": 243479604,
+                "startTimeString": "2024-05-24",
+                "endTimeString": "2026-05-24",
+                "finished": true,
+                "events": [],
+                "homework": [],
+                "exam": [],
+                "courseCount": -1,
+                "courseFinish": -1,
+                "specialValue": {
+                    "encs": {
+                        "enc": "5fe67d01f4f5eaed650e3521e10b617a",
+                        "oldenc": "8d4f12305e0797834c527f9fb593a2d8",
+                        "openc": "ea9c9907a5610131b6f8e84575e3e1df",
+                        "examenc": "6cf58dbdb27b6cf214aef6357659a3a2",
+                        "workenc": "a5783ae6050ce0666e22e4a8350d8620"
+                    },
+                    "cpi": "336581293"
+                }
+            },
+            {
+                "name": "大学生职业发展与就业指导",
+                "teacher": "谢  伟",
+                "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=230754110&clazzid=68276650&cpi=336581293&ismooc2=1",
+                "classId": 68276650,
+                "courseId": 230754110,
+                "startTimeString": "",
+                "endTimeString": "",
+                "finished": true,
+                "events": [],
+                "homework": [],
+                "exam": [],
+                "courseCount": -1,
+                "courseFinish": -1,
+                "specialValue": {
+                    "encs": {
+                        "enc": "f2e4a7e622b79ab84993baa2e5ec988d",
+                        "oldenc": "7e9d957969274f68d198a4e3611266b9",
+                        "openc": "8daa48fc780d123518a3ce5abf03e327",
+                        "examenc": "55cb6d9a4c7852d48025411dd487f0e5",
+                        "workenc": "aaeca368d6cdf907ffeac97d94cedcfc"
+                    },
+                    "cpi": "336581293"
+                }
+            },
+            {
+                "name": "【24春】形势与政策（2）",
+                "teacher": "肖建光",
+                "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=242847072&clazzid=97654415&cpi=336581293&ismooc2=1",
+                "classId": 97654415,
+                "courseId": 242847072,
+                "startTimeString": "2024-04-22",
+                "endTimeString": "2026-04-22",
+                "finished": true,
+                "events": [
+                    {
+                        "type": "签到",
+                        "startTime": 1715931613000,
+                        "endTime": 1715932213000
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1715413280000,
+                        "endTime": 1715413880000
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1715326763000,
+                        "endTime": 1715327363000
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1714121189000,
+                        "endTime": 1714121489000
+                    }
+                ],
+                "homework": [],
+                "exam": [],
+                "courseCount": -1,
+                "courseFinish": -1,
+                "specialValue": {
+                    "encs": {
+                        "enc": "d1e9d0c906de30034f732a45a8b5035f",
+                        "oldenc": "fb82cc3535d2a7c2a474efe3f1df7e82",
+                        "openc": "da3a26af9aade3e6c13fff7663bd2add",
+                        "examenc": "bd33c2426a891d0c136d84626c97ce23",
+                        "workenc": "445c9001e24e9676320a54f31a85a790"
+                    },
+                    "cpi": "336581293"
+                }
+            }
+        ]
+    }
+}

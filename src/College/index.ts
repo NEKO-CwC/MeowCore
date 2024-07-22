@@ -317,9 +317,15 @@ export const loadUserInfo = async (path: string): Promise<User> => {
 }
 
 export const dumpUserInfo = async (path: string, content: User): Promise<void> => {
-    await fs.writeFile(path, JSON.stringify(content))
+    await fs.writeFile(path, JSON.stringify(content, null, 4))
 }
 
-// export const autoDumpUserInfo = async (path: string, content: User): Promise<string> => {
-
-// }
+export const filterEndCourses = async (courses: Course[]): Promise<Course[]> => {
+    const res: Course[] = []
+    courses.forEach((course) => {
+        if (!course.finished) {
+            res.push(course)
+        }
+    })
+    return res
+}
