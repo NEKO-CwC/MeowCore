@@ -1,29 +1,38 @@
+import path from "path"
 import {
-    getCourseList, initCookie, login,
+    getCourseList, login,
     initCourseInfo,
     getSpecialValue,
+    initUser,
+    loadUserInfo,
+    dumpUserInfo,
 } from "./College"
-import { Course, UserInfo } from "./College/type.ts"
-import { asyncUpdate, retryRequests, sleep } from "./util/index.ts"
-// import { asyncUpdate } from "./util/index.ts"
+import { Course } from "./College/interface.ts"
+import { ensureFileExist, retryRequests, sleep } from "./util/index.ts"
 
-process.on("uncaughtException", (error) => {
-    console.error("Uncaught exception:", error.stack)
-})
+// process.on('unhandledRejection', (reason, promise) => {
+//     console.error('Unhandled Rejection at:', promise, 'reason:', reason);
+//     // 不退出程序
+//     // process.exit(1); // 如果需要退出程序，可以取消注释这行
+// });
 
 const main = async () => {
-    const info: UserInfo = {
-        cookie: await initCookie(),
-        specialValue: {
-            
-        },
-    }
+    const userName = "NEKO"
+    const userContentPath = `./data/${userName}.json`
+    await ensureFileExist(userContentPath)
+    const localUserInfo = await loadUserInfo(userContentPath)
+    console.log(Object.keys(localUserInfo).length)
+    const user = Object.keys(localUserInfo).length !== 0 ? localUserInfo : await initUser(
+        userName,
+        path.join(process.cwd(), `./data/${userName}.json`), 
+    )
 
-    let courses: Course[] = []
+    console.log(user.config.mode)
 
-    let statusCode;
+
+    let statusCode: string
     // eslint-disable-next-line prefer-const
-    [statusCode, info.cookie] = await login("15104410023", "Zrc_20050905", info.cookie)
+    [statusCode, user.xxt.cookie] = await login("15104410023", "Zrc_20050905", user)
 
     if (statusCode !== "登录成功") {
         throw new Error("登录失败")
@@ -31,35 +40,31 @@ const main = async () => {
 
     console.log("登录成功");
 
-    [courses, info.cookie] = await getCourseList(info.cookie)
-    courses = courses.slice(3, 6)
+    [user.xxt.courses, user.xxt.cookie] = await getCourseList(user)
+    console.log("🚀 ~ main ~ user.xxt.courses:", user.xxt.courses)
+    // user.xxt.courses = user.xxt.courses.slice(3, 6)
+    // user.xxt.courses = await user.xxt.courses.reduce(async (prevRes, item: Course) => {
+    //     const prev = await prevRes
 
-    courses = await courses.reduce(async (prevRes, item: Course) => {
-        const prev = await prevRes
+    //     const specialValue = await retryRequests(() => getSpecialValue(item, user))
+    //     await sleep(500)
+    //     return [...prev, { ...item, specialValue }]
+    // }, Promise.resolve([] as Course[]))
 
-        const specialValue = await retryRequests(10, getSpecialValue, [item, info.cookie], [400, 404])
-        await sleep(500)
-        return [...prev, { ...item, specialValue }]
-    }, Promise.resolve([] as Course[]))
+    // console.log("初始化完成")
 
-    console.log("初始化完成")
+    // // let testCourse = courses.pop() as Course
 
-    // let testCourse = courses.pop() as Course
-
-    // [testCourse] = await initCourseInfo(testCourse, info.cookie)
+    // // [testCourse] = await initCourseInfo(testCourse, info.user.chaoxing.cookie)
     
-    courses = await courses.reduce(async (prevRes, item: Course) => {
-        const res = await prevRes
-        const [newItem] = await initCourseInfo(item, info.cookie)
-        sleep(500)
-        return [...res, newItem]
-    }, Promise.resolve([] as Course[]))
-    
-    console.log(courses)
+    // user.xxt.courses = await user.xxt.courses.reduce(async (prevRes, item: Course) => {
+    //     const res = await prevRes
+    //     const [newItem] = await initCourseInfo(item, user)
+    //     sleep(500)
+    //     return [...res, newItem]
+    // }, Promise.resolve([] as Course[]))
+
+    await dumpUserInfo(userContentPath, user)
 }
 
-try {
-    main()
-} catch (error) {
-    console.log(error)
-}
+main()

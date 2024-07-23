@@ -1,28 +1,34 @@
 import * as cheerio from "cheerio"
 import { formatUrlQueryToRecord } from "../../../src/util/requests"
-import { Course, CourseHomework, SpecialValue } from "../type"
+import {
+    Course, CourseEventAttachment, CourseHomework, CourseHomeworkDetail, SpecialValue, 
+} from "../interface"
 
 export const parseCourseHTML = (courseHTML: string): Course[] => {
     const $ = cheerio.load(courseHTML)
     const courses: Course[] = []
 
     $(".course-info").each((_, element) => {
-        let startTime = ""
-        let endTime = ""
+        let startTime = 0
+        let endTime = 0
         let finished = false
         const courseElement = $(element)
         const url: string = courseElement.find("a").attr("href") as string
         const queryRecord = formatUrlQueryToRecord(url)
         const classId = parseInt(queryRecord.clazzid, 10) 
         const courseId = parseInt(queryRecord.courseid, 10) 
-        if (courseElement.find(".not-open-tip")) {
+        if (courseElement.find(".not-open-tip").html()) {
+            console.log(courseElement.find(".not-open-tip"))
             finished = true
         }
         const name = courseElement.find(".course-name").attr("title")
         const teacher = courseElement.find(".color3").attr("title")
         if (courseElement.find("p").last().text().indexOf("开课时间") !== -1) {
-            startTime = courseElement.find("p").last().text().split("～")[0].replace("开课时间：", "").trim()
-            endTime = courseElement.find("p").last().text().split("～")[1].trim()
+            startTime = Date.parse(courseElement.find("p").last().text().split("～")[0].replace("开课时间：", "").trim())
+            endTime = Date.parse(courseElement.find("p").last().text().split("～")[1].trim())
+            if (endTime < Date.now()) {
+                finished = true
+            }
         }
         courses.push({
             name,
@@ -30,8 +36,8 @@ export const parseCourseHTML = (courseHTML: string): Course[] => {
             url,
             classId,
             courseId,
-            startTimeString: startTime,
-            endTimeString: endTime,
+            startTime,
+            endTime,
             finished,
             events: [],
             homework: [],
@@ -97,4 +103,25 @@ export const parseHomeworkHTML = (html: string): CourseHomework[] => {
     })
 
     return res
+}
+
+export const parseHomeworkDetailHTML = (html: string): CourseHomeworkDetail => {
+    const $ = cheerio.load(html)
+
+    if ($("title").text() !== "查看详情") {
+        throw new Error("html 字符串格式返回有误")
+    }
+
+    const attachment: CourseEventAttachment[] = []
+
+    $(".attach-iframe").each((_, ele) => {
+        const element = $(ele)
+        attachment.push({
+            downPath: `https://mooc1.chaoxing.com/mooc-ans/ueditorupload/read?objectId=${element.attr("objectid")}`,
+            name: element.attr("filename") as string,
+            suffix: element.attr("filename")!.split(".").at(-1) as string, 
+        })
+    })
+
+    return { detailContent: $(".mark_item").html() as string, attachment }
 }

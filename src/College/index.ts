@@ -1,22 +1,26 @@
 import axios from "axios"
-import { prev } from "cheerio/lib/api/traversing"
-import { asyncUpdate, retryRequests, sleep } from "../util/index.ts"
+import * as fs from "fs/promises"
+import { onceRedirectRequest, retryRequests } from "../util/index.ts"
 import {
     generateConfig, generateCookieString, updateCookie, 
 } from "../util/requests.ts"
 import { encryptByAES } from "./chaoxing/crypto.ts"
 import {
-    CollegeCookie, Course, CourseEvent, CourseEvent_signIn, CourseEventAttachment,
+    ChaoxingUser,
+    CollegeCookie, Course, CourseEvent, CourseEventAttachment,
     CourseEventNotice,
     CourseEventSignIn,
     CourseHomework,
+    CourseHomeworkDetail,
     rawEvent,
     SpecialValue,
-} from "./type.ts"
-import { formatCourseEventAttachment } from "./format/json.ts"
+    User,
+} from "./interface.ts"
+import { formatCourseEventAttachment, formatCourseEvent } from "./format/json.ts"
 import {
-    parseCourseHTML, parseHomeworkHTML, parseSpecialValue, 
+    parseCourseHTML, parseHomeworkDetailHTML, parseHomeworkHTML, parseSpecialValue, 
 } from "./format/html.ts"
+import { CONFIG_MODE_STRICT } from "./constants.ts"
 
 const transferKey = "u2oh6Vu^HWe4_AES"
 
@@ -25,7 +29,21 @@ export const initCookie = async (): Promise<CollegeCookie> => ({
     mooc: {},
 })
 
-export const login = async (uid: string, pwd: string, cookie: CollegeCookie)
+// export const initConfig = async (rawConfig: Record<string, string>): Promise<Config> => {
+//     if (!rawConfig.mode) {}
+// }
+
+export const initUser = async (name: string, contentPath: string, mode = "default"): Promise<User> => (
+    {
+        config: { name, contentPath, mode },
+        xxt: {
+            cookie: await initCookie(),
+            courses: [],
+        } as ChaoxingUser, 
+    }
+)
+
+export const login = async (uid: string, pwd: string, user: User)
     : Promise<[string, CollegeCookie]> => {
     const url = "https://passport2.chaoxing.com/fanyalogin"
 
@@ -40,7 +58,7 @@ export const login = async (uid: string, pwd: string, cookie: CollegeCookie)
         doubleFactorLogin: "0",
         independentId: "0",
         independentNameId: "0",
-    }
+    }    
 
     const formData = new URLSearchParams(requestBody).toString()
 
@@ -52,7 +70,7 @@ export const login = async (uid: string, pwd: string, cookie: CollegeCookie)
         } = await axios.post(url, formData, generateConfig(
             {
                 Accept: "application/json, text/javascript, */*; q=0.01",
-                Cookie: generateCookieString(cookie.chaoxing),
+                Cookie: generateCookieString(user.xxt.cookie.chaoxing),
                 Host: "passport2.chaoxing.com",
                 Origin: "https://passport2.chaoxing.com",
                 Referer: "https://passport2.chaoxing.com/login",
@@ -66,17 +84,19 @@ export const login = async (uid: string, pwd: string, cookie: CollegeCookie)
             throw new Error(`未能正确登录，错误码为${status}`)
         }
 
+        console.log(data)
+
         if (data.status && headers["set-cookie"]) {
-            const chaoxingCookie = updateCookie(cookie.chaoxing, headers["set-cookie"], url)
+            const chaoxingCookie = updateCookie(user.xxt.cookie.chaoxing, headers["set-cookie"], url)
             const cacheCookie: CollegeCookie = {
                 chaoxing: chaoxingCookie,
-                mooc: cookie.mooc,
+                mooc: user.xxt.cookie.mooc,
             }
             return ["登录成功", cacheCookie]
         }
 
         if (data.msg2 === "用户名或密码错误") {
-            return ["用户名或密码错误", cookie]
+            return ["用户名或密码错误", user.xxt.cookie]
         }
         throw new Error("未知错误，可能是学习通寄了")
     } catch (error) {
@@ -85,50 +105,36 @@ export const login = async (uid: string, pwd: string, cookie: CollegeCookie)
             throw error
         }
 
-        throw new Error("其他未知错误")
+        throw error
     }
 }
 
-export const getSpecialValue = async (course: Course, cookie: CollegeCookie): Promise<SpecialValue> => {
+export const getSpecialValue = async (course: Course, user: User): Promise<SpecialValue> => {
     const { url } = course
     
     console.log(`${course.name}当前课程正在执行`)
-    let data
-
-    try {
-        await axios.get(url, {
-            maxRedirects: 0,
-            headers: {
-                Origin: "https://mooc1.chaoxing.com",
-                Referer: "https://i.chaoxing.com/base",
-                Accept: "*/*",
-                Cookie: `${generateCookieString(cookie.chaoxing)};${generateCookieString(cookie.mooc)}`,
-                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
-            }, 
-        })
-    } catch (error) {
-        if (!(axios.isAxiosError(error) && error.response?.status === 302)) {
-            throw error 
-        }
-
-        if (!error.response?.headers?.location) {
-            throw new Error("Location Not Found")
-        }
-
-        ({ data } = await axios.get(error.response.headers.location, {
-            maxRedirects: 0,
-            headers: {
-                Accept: "*/*",
-                Cookie: `${generateCookieString(cookie.chaoxing)};${generateCookieString(cookie.mooc)}`,
-                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
-            },
-        }))
-    }
+    const { data } : { data : string} = await onceRedirectRequest(axios.get, url, {
+        maxRedirects: 0,
+        headers: {
+            Origin: "https://mooc1.chaoxing.com",
+            Referer: "https://i.chaoxing.com/base",
+            Accept: "*/*",
+            Cookie: `${generateCookieString(user.xxt.cookie.chaoxing)};${generateCookieString(user.xxt.cookie.mooc)}`,
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+        },
+    }, {
+        maxRedirects: 0,
+        headers: {
+            Accept: "*/*",
+            Cookie: `${generateCookieString(user.xxt.cookie.chaoxing)};${generateCookieString(user.xxt.cookie.mooc)}`,
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+        },
+    })
 
     return parseSpecialValue(data)
 }
 
-export const getCourseList = async (cookie: CollegeCookie): Promise<[Course[], CollegeCookie]> => {
+export const getCourseList = async (user: User): Promise<[Course[], CollegeCookie]> => {
     const url = "https://mooc2-ans.chaoxing.com/mooc2-ans/visit/courselistdata"
 
     const requestBody: Record<string, string> = {
@@ -149,7 +155,7 @@ export const getCourseList = async (cookie: CollegeCookie): Promise<[Course[], C
         } = await axios.post(url, formData, generateConfig(
             {
                 Accept: "text/html, */*; q=0.01",
-                Cookie: generateCookieString(cookie.chaoxing) + generateCookieString(cookie.mooc),
+                Cookie: generateCookieString(user.xxt.cookie.chaoxing) + generateCookieString(user.xxt.cookie.mooc),
                 Host: "mooc2-ans.chaoxing.com",
                 Origin: "https://mooc2-ans.chaoxing.com",
                 Referer: "https://mooc2-ans.chaoxing.com/visit/interaction",
@@ -167,21 +173,33 @@ export const getCourseList = async (cookie: CollegeCookie): Promise<[Course[], C
         throw new Error("未知错误，可能是该提交 issue 了")
     }
 
-    const rseCookie = {
-        chaoxing: cookie.chaoxing,
+    const resCookie = {
+        chaoxing: user.xxt.cookie.chaoxing,
         mooc: updateCookie(
-            cookie.mooc,
+            user.xxt.cookie.mooc,
             headers["set-cookie"] as unknown as string[],
             "https://mooc2-ans.chaoxing.com",
         ),
     } as CollegeCookie
 
-    const res = parseCourseHTML(data)
+    const raw = parseCourseHTML(data)
 
-    return [res, rseCookie]
+    if (user.config.mode === CONFIG_MODE_STRICT) {
+        return [raw, resCookie]
+    }
+
+    const res: Course[] = []
+    raw.forEach((course: Course) => {
+        if (!course.finished) {
+            res.push(course)
+        }
+    })
+
+    return [res, resCookie]
 }
 
-export const getEventDetail = async (event: CourseEvent, cookie: CollegeCookie): Promise<CourseEvent> => {
+// 获取任务详细信息
+export const getEventDetail = async (event: CourseEvent, user: User): Promise<CourseEvent> => {
     if (event.type === "签到") {
         const res = event as CourseEventSignIn
 
@@ -192,13 +210,16 @@ export const getEventDetail = async (event: CourseEvent, cookie: CollegeCookie):
         const res = event as CourseEventNotice
         
         const { url } = res
-        const detail = {
+        const detail: {
+            detailContent: string
+            attachment: CourseEventAttachment[]
+        } = {
             detailContent: "",
             attachment: [],
         }
 
         const { data } = await axios.get(url, generateConfig({
-            Cookie: generateCookieString(cookie.chaoxing), 
+            Cookie: generateCookieString(user.xxt.cookie.chaoxing), 
         }))
     
         if (data.msg.attachment !== undefined) {
@@ -206,25 +227,31 @@ export const getEventDetail = async (event: CourseEvent, cookie: CollegeCookie):
         }
     
         if (data.msg.rtf_content !== undefined) {
-            return { ...res, title }
+            detail.detailContent = data.msg.rtf_content
+        } else {
+            detail.detailContent = data.msg.content
         }
     
-        return [data.msg.content, attachment]
+        res.detail = detail
+
+        return res as CourseEventNotice
     }
+
+    throw new Error("获取事件详细信息失败")
 }
 
 // TODO: 文件在线预览
-export const downloadAttachment = async (attachment: CourseEventAttachment, cookie: CollegeCookie) => {
+export const downloadAttachment = async (attachment: CourseEventAttachment, user: User) => {
     const url = attachment.downPath
 
     const { data } = await axios.get(url, generateConfig({
-        Cookie: generateCookieString(cookie.chaoxing),
+        Cookie: generateCookieString(user.xxt.cookie.chaoxing),
     }))
     console.log("🚀 ~ downloadAttachment ~ data:", data)
 }
 
-export const getCourseEvents = async (course: Course, cookie: CollegeCookie): Promise<[CourseEvent[], CollegeCookie]> => {
-    const url = `https://mobilelearn.chaoxing.com/v2/apis/active/student/activelist?classId=${course.classId}&courseId=${course.courseId}&fid=${cookie.chaoxing.fid}`
+export const getCourseEvents = async (course: Course, user: User): Promise<[CourseEvent[], CollegeCookie]> => {
+    const url = `https://mobilelearn.chaoxing.com/v2/apis/active/student/activelist?classId=${course.classId}&courseId=${course.courseId}&fid=${user.xxt.cookie.chaoxing.fid}`
 
     let attempts = 0
     let data
@@ -232,7 +259,7 @@ export const getCourseEvents = async (course: Course, cookie: CollegeCookie): Pr
     do {
         try {
             const response = await axios.get(url, generateConfig({
-                Cookie: `${generateCookieString(cookie.chaoxing)};${generateCookieString(cookie.mooc)}`,
+                Cookie: `${generateCookieString(user.xxt.cookie.chaoxing)};${generateCookieString(user.xxt.cookie.mooc)}`,
             }))
             data = response.data
     
@@ -258,44 +285,56 @@ export const getCourseEvents = async (course: Course, cookie: CollegeCookie): Pr
 
     console.log(data.data.activeList)
 
-    const events = await data.data.activeList.reduce(async (prevRes, event): Promise<CourseEvent[]> => {
-        const prev = await prevRes
-        const [content, attachment] = await getEventDetail(event.content, cookie)
-        return [...prev, {
-            startTime: event.startTime,
-            endTime: event.endTime,
-            title: event.nameOne,
-            briefContent: content,
-            finished: Date.now() > event.endTime,
-            attachment,
-        }]
-    }, Promise.resolve([] as CourseEvent[]))
+    const res = data.data.activeList.reduce((prev: CourseEvent[], raw: rawEvent): CourseEvent[] => [...prev, formatCourseEvent(raw)], [] as CourseEvent[])
 
-    return [events, cookie]
+    return [res, user.xxt.cookie]
 }
 
-export const getCourseHomework = async (course: Course, cookie: CollegeCookie): Promise<[CourseHomework[], CollegeCookie]> => {
+export const getCourseHomework = async (course: Course, user: User): Promise<[CourseHomework[], CollegeCookie]> => {
     const url = `https://mooc1.chaoxing.com/mooc2/work/list?courseId=${course.courseId}&classId=${course.classId}&status=2&enc=${course.specialValue?.encs.workenc}&cpi=${course.specialValue?.cpi}`
 
     const { data } = await axios.get(url, generateConfig({
         Host: "mooc1.chaoxing.com",
         Referer: "https://mooc1.chaoxing.com/mooc2/work/list",
-        Cookie: `${generateCookieString(cookie.chaoxing)};${generateCookieString(cookie.mooc)}`,
+        Cookie: `${generateCookieString(user.xxt.cookie.chaoxing)};${generateCookieString(user.xxt.cookie.mooc)}`,
     }))
 
     // console.log(data)
 
     const res = parseHomeworkHTML(data)
 
-    return [res, cookie]
+    return [res, user.xxt.cookie]
 }
 
-export const initCourseInfo = async (course: Course, cookie: CollegeCookie): Promise<[Course, CollegeCookie]> => {
-    const [resEvent] = await retryRequests(10, getCourseEvents, [course, cookie], [404])
-    const [resHomework] = await retryRequests(10, getCourseHomework, [course, cookie], [404])
+export const initCourseInfo = async (course: Course, user: User): Promise<[Course, CollegeCookie]> => {
+    const [resEvent] = await retryRequests<[CourseEvent[], CollegeCookie]>(() => getCourseEvents(course, user))
+    const [resHomework] = await retryRequests<[CourseHomework[], CollegeCookie]>(() => getCourseHomework(course, user))
 
     course.events = resEvent
     course.homework = resHomework
 
-    return [course, cookie]
+    return [course, user.xxt.cookie]
+}
+
+export const loadUserInfo = async (path: string): Promise<User> => {
+    const content = await fs.readFile(path, "utf-8")
+    return JSON.parse(content) as User
+}
+
+export const dumpUserInfo = async (path: string, content: User): Promise<void> => {
+    await fs.writeFile(path, JSON.stringify(content, null, 4))
+}
+
+export const getHomeworkDetail = async (homework: CourseHomework, user: User): Promise<CourseHomeworkDetail> => {
+    const { url } = homework
+    const config = {
+        headers: {
+            Accept: "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-",
+            Host: "mooc1.chaoxing.com",
+            Cookie: generateCookieString(user.xxt.cookie.chaoxing) + generateCookieString(user.xxt.cookie.mooc),
+        }, 
+    }
+    const { data }: { data: string} = await onceRedirectRequest(axios.get, url, config, config)
+
+    return parseHomeworkDetailHTML(data)
 }

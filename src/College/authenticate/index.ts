@@ -1,7 +1,7 @@
 import axios, { head } from "axios"
 import { CookieJar, Cookie } from "tough-cookie"
 import { generateConfig, generateCookieString, updateCookie } from "../../util/requests.ts"
-import { CollegeCookie } from "../type.ts"
+import { CollegeCookie } from "../interface.ts"
 
 export const getCookie = async (): Promise<Cookie[]> => {
     const url = "https://i.chaoxing.com"
