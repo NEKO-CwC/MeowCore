@@ -20,7 +20,7 @@ import { formatCourseEventAttachment, formatCourseEvent } from "./format/json.ts
 import {
     parseCourseHTML, parseHomeworkDetailHTML, parseHomeworkHTML, parseSpecialValue, 
 } from "./format/html.ts"
-import { CONFIG_MODE_STRICT } from "./constants.ts"
+import { CONFIG_MODE_SIMPLE, CONFIG_MODE_STRICT } from "./constants.ts"
 
 const transferKey = "u2oh6Vu^HWe4_AES"
 
@@ -35,7 +35,9 @@ export const initCookie = async (): Promise<CollegeCookie> => ({
 
 export const initUser = async (name: string, contentPath: string, mode = "default"): Promise<User> => (
     {
-        config: { name, contentPath, mode },
+        config: {
+            name, contentPath, mode, lastModify: Date.now(), 
+        },
         xxt: {
             cookie: await initCookie(),
             courses: [],
@@ -135,6 +137,9 @@ export const getSpecialValue = async (course: Course, user: User): Promise<Speci
 }
 
 export const getCourseList = async (user: User): Promise<[Course[], CollegeCookie]> => {
+    if (user.config.mode === CONFIG_MODE_SIMPLE && Date.now() - user.config.lastModify > 1000 * 60 * 60 * 24 * 30) {
+        return [user.xxt.courses, user.xxt.cookie]
+    } 
     const url = "https://mooc2-ans.chaoxing.com/mooc2-ans/visit/courselistdata"
 
     const requestBody: Record<string, string> = {
@@ -295,11 +300,11 @@ export const getCourseHomework = async (course: Course, user: User): Promise<[Co
 
     const { data } = await axios.get(url, generateConfig({
         Host: "mooc1.chaoxing.com",
-        Referer: "https://mooc1.chaoxing.com/mooc2/work/list",
+        Referer: "https://mooc2-ans.chaoxing.com/mooc2-ans/mycourse/stu?",
         Cookie: `${generateCookieString(user.xxt.cookie.chaoxing)};${generateCookieString(user.xxt.cookie.mooc)}`,
     }))
 
-    // console.log(data)
+    console.log(data)
 
     const res = parseHomeworkHTML(data)
 
@@ -322,6 +327,7 @@ export const loadUserInfo = async (path: string): Promise<User> => {
 }
 
 export const dumpUserInfo = async (path: string, content: User): Promise<void> => {
+    content.config.lastModify = Date.now()
     await fs.writeFile(path, JSON.stringify(content, null, 4))
 }
 

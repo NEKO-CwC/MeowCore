@@ -1,6 +1,8 @@
 import {
     CourseEventAttachment, rawEvent, CourseEvent, CourseEventSignIn,
-    CourseEventNotice, 
+    CourseEventNotice,
+    CourseEventDiscuss,
+    CourseEventQuestionnaire, 
 } from "../interface"
 
 export const formatCourseEventAttachment = (raw: string): CourseEventAttachment[] => {
@@ -44,6 +46,35 @@ export const formatCourseEvent = (raw: rawEvent) => {
             briefContent,
         } as CourseEventNotice
     }
+
+    if (raw.type === 5) {
+        res.type = "主题讨论"
+        const title = raw.nameOne as string
+        const briefContent = raw.content as string
+
+        const id = JSON.parse(raw.content as string).idCode
+        const url = `https://notice.chaoxing.com/pc/course/notice/${id}/getNoticeDetail`
+        
+        return {
+            ...res, 
+            url,
+            title,
+            briefContent,
+        } as CourseEventDiscuss
+    }
+
+    if (raw.type === 14) {
+        res.type = "问卷"
+        const title = raw.nameOne as string
+        const briefContent = raw.nameOne as string
+
+        return {
+            ...res, 
+            url: "",
+            title,
+            briefContent,
+        } as CourseEventQuestionnaire
+    }
     
-    throw new Error("不合法的输入")
+    throw new Error(`不合法的输入: ${raw}`)
 }

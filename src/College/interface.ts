@@ -20,7 +20,6 @@ export interface CourseEventNotice {
         detailContent:string
         attachment: CourseEventAttachment[]
     }
-    
 }
 
 export interface CourseEventSignIn {
@@ -28,8 +27,25 @@ export interface CourseEventSignIn {
     startTime: number
     endTime: number
 }
+export interface CourseEventDiscuss {
+    type: string
+    startTime: number
+    endTime: number
+    url: string
+    title: string
+    briefContent: string
+}
 
-export type CourseEvent = CourseEventNotice | CourseEventSignIn
+export interface CourseEventQuestionnaire {
+    type: string
+    startTime: number
+    endTime: number
+    url: string
+    title: string
+    briefContent: string
+}
+
+export type CourseEvent = CourseEventNotice | CourseEventSignIn | CourseEventDiscuss | CourseEventQuestionnaire
 
 export interface CourseHomeworkDetail {
     detailContent: string,
@@ -100,6 +116,7 @@ export interface Config {
     name: string
     contentPath: string
     mode: string
+    lastModify: number
 }
 
 export interface User {

@@ -31,26 +31,26 @@ export const asyncUpdate = async <T>(raw: T[], func: (item: T) => Promise<T>, de
 }
 
 export const defaultErrorDeal = (error: any, attempt: number, cause: any) => {
-    if (axios.isAxiosError(error) && [400, 404].indexOf(error.response?.status as number) !== -1) {
+    if (axios.isAxiosError(error) && error.response!.status > 400 && error.response!.status < 500) {
         console.log(`正在重试第${attempt}次`)
         // eslint-disable-next-line no-return-assign
         return attempt += 1
     } 
-    throw new Error("未知错误", { cause })
+    throw new Error(`未知错误: ${error}`, { cause })
 }
 
 export const retryRequests = async <T>(
     callback: () => Promise<T> | T,
     errorDeal: (error: any, attempt: number, cause?: any) => number = defaultErrorDeal,
     maxTryTimes = 10,
-    delay = 500,
+    delay = 1000,
 ): Promise<T> => {
     let attempt = 0
     while (attempt < maxTryTimes) {
         try {
             return await callback()
         } catch (error) {
-            attempt = errorDeal(error, attempt)
+            attempt = errorDeal(error, attempt, callback)
         }
         await sleep(delay)
     }
@@ -93,6 +93,12 @@ export const onceRedirectRequest = async (method: Function, url: string, rawConf
         return method(error.response?.headers.location, redirectConfig)
     }
 } 
+
+export const generateRandomNumber = (length: number): number => {
+    const min = 10 ** (length - 1)
+    const max = 10 ** length - 1
+    return Math.floor(Math.random() * (max - min + 1)) + min
+}
 
 // export const sleepTaskList = async (ms: number) => {
 //     return 
