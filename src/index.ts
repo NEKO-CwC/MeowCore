@@ -40,15 +40,14 @@ const main = async () => {
     console.log("登录成功");
 
     [user.xxt.courses, user.xxt.cookie] = await getCourseList(user)
-    user.xxt.courses = user.xxt.courses.slice(0, 21)
+    console.log("🚀 ~ main ~ user.xxt.courses:", user.xxt.courses)
     user.xxt.courses = await user.xxt.courses.reduce(async (prevRes, item: Course) => {
         const prev = await prevRes
 
-        const specialValue = await retryRequests(() => getSpecialValue(item, user))
-        await sleep(500)
+        const specialValue = await getSpecialValue(item, user)
+        await sleep(100)
         item.specialValue = specialValue
         const [newItem] = await initCourseInfo(item, user)
-        sleep(500)
         return [...prev, newItem]
     }, Promise.resolve([] as Course[]))
 

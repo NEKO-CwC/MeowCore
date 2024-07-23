@@ -24,6 +24,7 @@ export interface CourseEventNotice {
 
 export interface CourseEventSignIn {
     type: string
+    url: string
     startTime: number
     endTime: number
 }

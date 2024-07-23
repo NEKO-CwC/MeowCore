@@ -3,51 +3,67 @@
         "name": "NEKO",
         "contentPath": "F:\\.PROJECT\\MeowBot\\.CORE\\data\\NEKO.json",
         "mode": "default",
-        "lastModify": 1721701352455
+        "lastModify": 1721722675999
     },
     "xxt": {
         "cookie": {
             "chaoxing": {
-                "JSESSIONID": "1613FED7D3ED4A2DAA4504657DD796A3",
+                "JSESSIONID": "D2E4286BBD19501AC961F413DD77B615",
                 "lv": "1",
                 "fid": "262",
                 "_uid": "291751624",
-                "uf": "da0883eb5260151ebad3d6695970ad177454b136db54abef4c92f35d0e7ff9d8bfc3584025042cb17f1fda31eebe3677c49d67c0c30ca5047c5a963e85f110998c7ce50fab91a502fd68be96b6183b1a0be07017333ca4bc7a53820b40ebc610749177364301e94c",
-                "_d": "1721701339457",
+                "uf": "da0883eb5260151ebad3d6695970ad177454b136db54abef4c92f35d0e7ff9d8e6a8a8b8de47d4f878ee9715fa9dbdbbc49d67c0c30ca5047c5a963e85f110998c7ce50fab91a502fd68be96b6183b1a0be07017333ca4bc9548eea5cbed1be9107c785cb208fc19",
+                "_d": "1721722669861",
                 "UID": "291751624",
                 "vc": "DEB0B06F4DCD688E3E1989AE3E8F4C58",
                 "vc2": "A2750E5C62597F418DD2FC0B1D2A47B0",
-                "vc3": "NfkhYGwXjT6mByjUyZyfkJqF49fNVusxx004OaJiUTs0DK5kWtM%2F6XzmHvsbaYrJNVj7WLtdKNqTFcyW6WRg93aTjt76KSf3HyvrkDQJcF5Fj0yUMNgV0etYmiEbZ9hH%2Fz6bAI%2Ff1ANOINVH%2Fr6GLGjBXGqrxEwVZy08rTO0pCY%3Dcea3a5ec888ba5fd29e107d69b4dd8f5",
-                "cx_p_token": "aeafdd97071c5c4c92edb6001c589cea",
-                "p_auth_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiIyOTE3NTE2MjQiLCJsb2dpblRpbWUiOjE3MjE3MDEzMzk0NTgsImV4cCI6MTcyMjMwNjEzOX0.I2G5PaN4dk7zPoChbT1Qy25wBOR2rm86mCjIa8urpGg",
+                "vc3": "Bu0Ojh50h%2BbwTi0IOFnJXLWP2PfHJV8fK7deW7yFPjgHfcE9i6dXWP8rSX2NTPrpxc%2FJamIsYFXZ2es0Y5e3I1eNjM6CuvlUUCalbB2kyG0RdKVmvcbA7TNkV5sdmBp2GHHQ8rlUye3ipB7ExfQFC11yGE3OS3coyGerPOQeXA0%3Decaee322b37afc88ba77cc70646a1c5f",
+                "cx_p_token": "176787afa76e19a9199be4f9140f8f25",
+                "p_auth_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiIyOTE3NTE2MjQiLCJsb2dpblRpbWUiOjE3MjE3MjI2Njk4NjIsImV4cCI6MTcyMjMyNzQ2OX0.9N0p24ABXc6sCFR0JDgX4kmI1_84KVt2MnDYkVi02-g",
                 "xxtenc": "2fab2ee9047a79e94f3bc3fd37f142cd",
-                "DSSTASH_LOG": "C_38-UN_1233-US_291751624-T_1721701339458",
+                "DSSTASH_LOG": "C_38-UN_1233-US_291751624-T_1721722669863",
                 "route": "8a74486ba4c41f9a34b828918e474ac0"
             },
             "mooc": {
-                "k8s": "1721701340.201.4740.558724",
-                "jrose": "7F312FF5891E4BA7D556AA21F3A1D56D.mooc2-3296937055-1kg51",
-                "route": "f9c314690d8e5d436efa7770254d0199"
+                "k8s": "1721722671.498.11028.88064",
+                "jrose": "78AB65B1B44AD3E695283351C96539DD.mooc2-2181710942-cft6j",
+                "route": "f4530fc65c8934baba769156ca67ec88"
             }
         },
         "courses": [
             {
-                "name": "【24夏】电工电子实习（Ⅰ）",
-                "teacher": "龚建强",
-                "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=244261607&clazzid=101312448&cpi=336581293&ismooc2=1",
-                "classId": 101312448,
-                "courseId": 244261607,
-                "startTime": 1719878400000,
-                "endTime": 1782950400000,
+                "name": "【24春】形势与政策（2）",
+                "teacher": "肖建光",
+                "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=242847072&clazzid=97654415&cpi=336581293&ismooc2=1",
+                "classId": 97654415,
+                "courseId": 242847072,
+                "startTime": 1713744000000,
+                "endTime": 1776816000000,
                 "finished": false,
                 "events": [
                     {
-                        "type": "通知",
-                        "startTime": 1720347270000,
-                        "endTime": 1720433670000,
-                        "url": "https://notice.chaoxing.com/pc/course/notice/837801D09F7F1940D9C204C044A77D4A/getNoticeDetail",
-                        "title": "实习安排",
-                        "briefContent": "{\"creatorRealName\":\"龚建强\",\"idCode\":\"837801D09F7F1940D9C204C044A77D4A\"}"
+                        "type": "签到",
+                        "startTime": 1715931613000,
+                        "endTime": 1715932213000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=242847072&clazzid=97654415&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1715413280000,
+                        "endTime": 1715413880000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=242847072&clazzid=97654415&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1715326763000,
+                        "endTime": 1715327363000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=242847072&clazzid=97654415&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1714121189000,
+                        "endTime": 1714121489000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=242847072&clazzid=97654415&cpi=336581293&ismooc2=1"
                     }
                 ],
                 "homework": [],
@@ -56,23 +72,203 @@
                 "courseFinish": -1,
                 "specialValue": {
                     "encs": {
-                        "enc": "249b14b310a2a27ca1f4aa53da7d5b58",
-                        "oldenc": "8c744dc710ce217db128dc5bcdfab60b",
-                        "openc": "e1c216027d1c0248ae9f41435f2f7302",
-                        "examenc": "9a4357d0b4f2aecd9be59e99fe267ee6",
-                        "workenc": "459a702aa782902bc6c5583fa9d2002c"
+                        "enc": "6ad5806fdf7a6af615e2ee55ac848e5c",
+                        "oldenc": "fb82cc3535d2a7c2a474efe3f1df7e82",
+                        "openc": "da3a26af9aade3e6c13fff7663bd2add",
+                        "examenc": "bd33c2426a891d0c136d84626c97ce23",
+                        "workenc": "445c9001e24e9676320a54f31a85a790"
                     },
                     "cpi": "336581293"
                 }
             },
             {
-                "name": "【24夏】程序设计课程实践",
-                "teacher": "陈轶",
-                "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=244232999&clazzid=101241813&cpi=336581293&ismooc2=1",
-                "classId": 101241813,
-                "courseId": 244232999,
-                "startTime": 1719705600000,
-                "endTime": 1782777600000,
+                "name": "【24春】大学生职业发展与就业指导",
+                "teacher": "黄紫筠",
+                "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=242844086&clazzid=97647110&cpi=336581293&ismooc2=1",
+                "classId": 97647110,
+                "courseId": 242844086,
+                "startTime": 1713657600000,
+                "endTime": 1776729600000,
+                "finished": false,
+                "events": [
+                    {
+                        "type": "通知",
+                        "startTime": 1719213474000,
+                        "endTime": 1719299874000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/E0302439276FDAD6094AA86A52FEBD38/getNoticeDetail",
+                        "title": "《【24春】大学生职业发展与就业指导》",
+                        "briefContent": "{\"creatorRealName\":\"黄紫筠\",\"idCode\":\"E0302439276FDAD6094AA86A52FEBD38\"}"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1718090613000,
+                        "endTime": 1718090793000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=242844086&clazzid=97647110&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1717480409000,
+                        "endTime": 1717480529000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=242844086&clazzid=97647110&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1716880753000,
+                        "endTime": 1716880873000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=242844086&clazzid=97647110&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "通知",
+                        "startTime": 1716260148000,
+                        "endTime": 1716346548000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/20163F8E59589E3DF6AF3CF1D25ED7B3/getNoticeDetail",
+                        "title": "《【24春】大学生职业发展与就业指导》",
+                        "briefContent": "{\"creatorRealName\":\"黄紫筠\",\"idCode\":\"20163F8E59589E3DF6AF3CF1D25ED7B3\"}"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1716273653000,
+                        "endTime": 1716273833000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=242844086&clazzid=97647110&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "通知",
+                        "startTime": 1714462493000,
+                        "endTime": 1714548893000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/7360287B70C4E40A094AA86A52FEBD38/getNoticeDetail",
+                        "title": "《【24春】大学生职业发展与就业指导》",
+                        "briefContent": "{\"creatorRealName\":\"黄紫筠\",\"idCode\":\"7360287B70C4E40A094AA86A52FEBD38\"}"
+                    },
+                    {
+                        "type": "通知",
+                        "startTime": 1713931458000,
+                        "endTime": 1714017858000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/88CE7E7AF845FE697930AAA6FC4C4A98/getNoticeDetail",
+                        "title": "《【24春】大学生职业发展与就业指导》",
+                        "briefContent": "{\"creatorRealName\":\"黄紫筠\",\"idCode\":\"88CE7E7AF845FE697930AAA6FC4C4A98\"}"
+                    },
+                    {
+                        "type": "通知",
+                        "startTime": 1713854644000,
+                        "endTime": 1713941044000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/0685168F4F6350F5F6AF3CF1D25ED7B3/getNoticeDetail",
+                        "title": "《【24春】大学生职业发展与就业指导》",
+                        "briefContent": "{\"creatorRealName\":\"黄紫筠\",\"idCode\":\"0685168F4F6350F5F6AF3CF1D25ED7B3\"}"
+                    }
+                ],
+                "homework": [],
+                "exam": [],
+                "courseCount": -1,
+                "courseFinish": -1,
+                "specialValue": {
+                    "encs": {
+                        "enc": "5be489b7025b047131b9b33792516306",
+                        "oldenc": "9e1eab5f0e4fd86be23739739232dddb",
+                        "openc": "e3411e6a9fa1ad16cf48fa81aee455ad",
+                        "examenc": "42d3841e3b434e6ed9acbcfdc523a82b",
+                        "workenc": "73d9b8b7451ccfc93afeff50f1394828"
+                    },
+                    "cpi": "336581293"
+                }
+            },
+            {
+                "name": "【24春】问药：解密用药安全",
+                "teacher": "徐睿来",
+                "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240832104&clazzid=92304646&cpi=336581293&ismooc2=1",
+                "classId": 92304646,
+                "courseId": 240832104,
+                "startTime": 1708387200000,
+                "endTime": 1771545600000,
+                "finished": false,
+                "events": [
+                    {
+                        "type": "主题讨论",
+                        "startTime": 1716883048000,
+                        "endTime": 1717055848000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240832104&clazzid=92304646&cpi=336581293&ismooc2=1",
+                        "title": "请同学们谈谈觉得阅读说明书困难的几个方面？如文字太小太密，很难看清；语言过于专业，普通老百姓不易理解；觉得有些内容描述不明确；整体内容过长，不知从何读起，不知哪些信息是自己获取的；很多药名十分相似，易混淆，造成服药错误。等等。。。",
+                        "briefContent": "请同学们谈谈觉得阅读说明书困难的几个方面？如文字太小太密，很难看清；语言过于专业，普通老百姓不易理解；觉得有些内容描述不明确；整体内容过长，不知从何读起，不知哪些信息是自己获取的；很多药名十分相似，易混淆，造成服药错误。等等。。。"
+                    },
+                    {
+                        "type": "问卷",
+                        "startTime": 1716883009000,
+                        "endTime": 1716890209000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240832104&clazzid=92304646&cpi=336581293&ismooc2=1",
+                        "title": "同学，你们吃药前会看说明书吗？",
+                        "briefContent": "同学，你们吃药前会看说明书吗？"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1716442202000,
+                        "endTime": 1716447602000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240832104&clazzid=92304646&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "主题讨论",
+                        "startTime": 1715775851000,
+                        "endTime": 1715862251000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240832104&clazzid=92304646&cpi=336581293&ismooc2=1",
+                        "title": "你更倾向于哪种避孕方式，为什么？",
+                        "briefContent": "你更倾向于哪种避孕方式，为什么？"
+                    },
+                    {
+                        "type": "主题讨论",
+                        "startTime": 1715160160000,
+                        "endTime": 1715246560000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240832104&clazzid=92304646&cpi=336581293&ismooc2=1",
+                        "title": "台湾一女孩因生理期坐了爱心专座，结果上来一位老人看到女孩在低头玩手机，就让女孩给她让座。女孩说自己生理期身体不舒服，不方便让座，结果大妈直接恶语相加骂女孩是下三滥，还说自己也年轻过也有过生理期。现就这件事讨论以下几点：1、女孩生理期正在经历的“姨妈痛”是什么？常见症状有什么？2、有什么方法可以帮助这位女孩缓解“姨妈痛”？3、对于女孩生理期坐公交车的爱心座，大妈怒吼逼让座这件事你怎么看？",
+                        "briefContent": "台湾一女孩因生理期坐了爱心专座，结果上来一位老人看到女孩在低头玩手机，就让女孩给她让座。女孩说自己生理期身体不舒服，不方便让座，结果大妈直接恶语相加骂女孩是下三滥，还说自己也年轻过也有过生理期。现就这件事讨论以下几点：1、女孩生理期正在经历的“姨妈痛”是什么？常见症状有什么？2、有什么方法可以帮助这位女孩缓解“姨妈痛”？3、对于女孩生理期坐公交车的爱心座，大妈怒吼逼让座这件事你怎么看？"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1715232902000,
+                        "endTime": 1715238302000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240832104&clazzid=92304646&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1714024805000,
+                        "endTime": 1714028405000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240832104&clazzid=92304646&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1712833209000,
+                        "endTime": 1712840409000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240832104&clazzid=92304646&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "主题讨论",
+                        "startTime": 1708666648000,
+                        "endTime": 1708839448000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240832104&clazzid=92304646&cpi=336581293&ismooc2=1",
+                        "title": "请同学们回答一下，在你眼中的药师是做什么的？",
+                        "briefContent": "请同学们回答一下，在你眼中的药师是做什么的？"
+                    }
+                ],
+                "homework": [],
+                "exam": [],
+                "courseCount": -1,
+                "courseFinish": -1,
+                "specialValue": {
+                    "encs": {
+                        "enc": "64a4ebd44793b49a855ed01504dad4db",
+                        "oldenc": "01cd3b8a7a6be49b5335d82c712e7727",
+                        "openc": "5414f3b9be381f142c994af9d08906fa",
+                        "examenc": "1d51311c301a8d2b719d73b5e49ccdb8",
+                        "workenc": "571e3c9f7dcbf54b373646980b79d28a"
+                    },
+                    "cpi": "336581293"
+                }
+            },
+            {
+                "name": "【24春】高等数学（1）下",
+                "teacher": "徐刚",
+                "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=241387820&clazzid=93933359&cpi=336581293&ismooc2=1",
+                "classId": 93933359,
+                "courseId": 241387820,
+                "startTime": 1709337600000,
+                "endTime": 1772409600000,
                 "finished": false,
                 "events": [],
                 "homework": [],
@@ -81,11 +277,1969 @@
                 "courseFinish": -1,
                 "specialValue": {
                     "encs": {
-                        "enc": "4918babbeb9e7fc892c1314bef71a305",
-                        "oldenc": "4f8526d19e9cc94456a6ffc7dbf9cbfd",
-                        "openc": "156fdcf1db5f768328b71ca9dd9f1ddf",
-                        "examenc": "5ddf68117381c09e8691a931f0b7fa5e",
-                        "workenc": "394a35acaab81030931862159520019b"
+                        "enc": "e6856272c6c432b5ddc141d2eac6f1cf",
+                        "oldenc": "46506d6197c29c6e59d8f71a62af150c",
+                        "openc": "c9bb54a3f7dde134da3cc95a4ac07fcc",
+                        "examenc": "f4ae61225680c4d5e3422e1d043a9da1",
+                        "workenc": "28ef43820d32bad797824628cb1473f3"
+                    },
+                    "cpi": "336581293"
+                }
+            },
+            {
+                "name": "【24春】程序设计竞赛算法",
+                "teacher": "于海雯、江顺亮",
+                "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=241157593&clazzid=93256569&cpi=336581293&ismooc2=1",
+                "classId": 93256569,
+                "courseId": 241157593,
+                "startTime": 1708992000000,
+                "endTime": 1772150400000,
+                "finished": false,
+                "events": [
+                    {
+                        "type": "问卷",
+                        "startTime": 1718941016000,
+                        "endTime": "",
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=241157593&clazzid=93256569&cpi=336581293&ismooc2=1",
+                        "title": "2023-2024-2_程序设计竞赛算法-课程满意度调查问卷",
+                        "briefContent": "2023-2024-2_程序设计竞赛算法-课程满意度调查问卷"
+                    },
+                    {
+                        "type": "通知",
+                        "startTime": 1717045473000,
+                        "endTime": 1717131873000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/EF4E6164624567FB70CE8776F735574C/getNoticeDetail",
+                        "title": "今天期末考试啦！程序设计竞赛算法",
+                        "briefContent": "{\"creatorRealName\":\"于海雯\",\"idCode\":\"EF4E6164624567FB70CE8776F735574C\"}"
+                    },
+                    {
+                        "type": "通知",
+                        "startTime": 1716607777000,
+                        "endTime": 1716694177000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/8D96ECFB7C0B811509DA20B684CD7D35/getNoticeDetail",
+                        "title": "PTA作业最后一次开放",
+                        "briefContent": "{\"creatorRealName\":\"于海雯\",\"idCode\":\"8D96ECFB7C0B811509DA20B684CD7D35\"}"
+                    },
+                    {
+                        "type": "通知",
+                        "startTime": 1715906643000,
+                        "endTime": 1715993043000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/3AB4C0378F2B3129D9C204C044A77D4A/getNoticeDetail",
+                        "title": "2023-2024-2-程序设计竞赛算法-期末考试安排",
+                        "briefContent": "{\"creatorRealName\":\"于海雯\",\"idCode\":\"3AB4C0378F2B3129D9C204C044A77D4A\"}"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1715847622000,
+                        "endTime": 1715849422000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=241157593&clazzid=93256569&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "通知",
+                        "startTime": 1715757869000,
+                        "endTime": 1715844269000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/D82EA211749BCBAC70CE8776F735574C/getNoticeDetail",
+                        "title": "第七届大学生程序设计竞赛南昌大学校赛 报名啦~~~",
+                        "briefContent": "{\"creatorRealName\":\"于海雯\",\"idCode\":\"D82EA211749BCBAC70CE8776F735574C\"}"
+                    },
+                    {
+                        "type": "抢答",
+                        "startTime": 1715242232000,
+                        "endTime": 1715242532000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=241157593&clazzid=93256569&cpi=336581293&ismooc2=1",
+                        "title": "整数拆分问题思路？",
+                        "briefContent": "整数拆分问题思路？"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1715240397000,
+                        "endTime": 1715240697000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=241157593&clazzid=93256569&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "通知",
+                        "startTime": 1714271339000,
+                        "endTime": 1714357739000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/9665283905F4A0F97930AAA6FC4C4A98/getNoticeDetail",
+                        "title": "招募竞赛队员《【24春】程序设计竞赛算法》",
+                        "briefContent": "{\"creatorRealName\":\"于海雯\",\"idCode\":\"9665283905F4A0F97930AAA6FC4C4A98\"}"
+                    },
+                    {
+                        "type": "抢答",
+                        "startTime": 1714296170000,
+                        "endTime": 1714296470000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=241157593&clazzid=93256569&cpi=336581293&ismooc2=1",
+                        "title": "poj1605解题思路？",
+                        "briefContent": "poj1605解题思路？"
+                    },
+                    {
+                        "type": "抢答",
+                        "startTime": 1714294359000,
+                        "endTime": 1714294659000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=241157593&clazzid=93256569&cpi=336581293&ismooc2=1",
+                        "title": "杭电2037",
+                        "briefContent": "杭电2037"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1714290016000,
+                        "endTime": 1714290496000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=241157593&clazzid=93256569&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "通知",
+                        "startTime": 1713425973000,
+                        "endTime": 1713512373000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/C71FF0029DD1CC8B390710F83E45E3D0/getNoticeDetail",
+                        "title": "点到啦《【24春】程序设计竞赛算法》",
+                        "briefContent": "{\"creatorRealName\":\"于海雯\",\"idCode\":\"C71FF0029DD1CC8B390710F83E45E3D0\"}"
+                    },
+                    {
+                        "type": "抢答",
+                        "startTime": 1713433826000,
+                        "endTime": 1713434126000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=241157593&clazzid=93256569&cpi=336581293&ismooc2=1",
+                        "title": "骨牌拓展问题？",
+                        "briefContent": "骨牌拓展问题？"
+                    },
+                    {
+                        "type": "抢答",
+                        "startTime": 1713430789000,
+                        "endTime": 1713431089000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=241157593&clazzid=93256569&cpi=336581293&ismooc2=1",
+                        "title": "杭电2050解题思路？",
+                        "briefContent": "杭电2050解题思路？"
+                    },
+                    {
+                        "type": "抢答",
+                        "startTime": 1713429870000,
+                        "endTime": 1713430170000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=241157593&clazzid=93256569&cpi=336581293&ismooc2=1",
+                        "title": "杭电2018解题规律？",
+                        "briefContent": "杭电2018解题规律？"
+                    },
+                    {
+                        "type": "抢答",
+                        "startTime": 1713428287000,
+                        "endTime": 1713428587000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=241157593&clazzid=93256569&cpi=336581293&ismooc2=1",
+                        "title": "杭电2709解题思路？",
+                        "briefContent": "杭电2709解题思路？"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1713425926000,
+                        "endTime": 1713426826000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=241157593&clazzid=93256569&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "通知",
+                        "startTime": 1713010392000,
+                        "endTime": 1713096792000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/15E7FF5186E9E42809DA20B684CD7D35/getNoticeDetail",
+                        "title": "赛事通知01",
+                        "briefContent": "{\"creatorRealName\":\"于海雯\",\"idCode\":\"15E7FF5186E9E42809DA20B684CD7D35\"}"
+                    },
+                    {
+                        "type": "通知",
+                        "startTime": 1712799980000,
+                        "endTime": 1712886380000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/2787AF3679632306390710F83E45E3D0/getNoticeDetail",
+                        "title": "紧急通知，下午出差，课程延后一周",
+                        "briefContent": "{\"creatorRealName\":\"于海雯\",\"idCode\":\"2787AF3679632306390710F83E45E3D0\"}"
+                    },
+                    {
+                        "type": "通知",
+                        "startTime": 1712460535000,
+                        "endTime": 1712546935000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/DED63B92D461BCC909DA20B684CD7D35/getNoticeDetail",
+                        "title": "7次作业已经全部开放了",
+                        "briefContent": "{\"creatorRealName\":\"于海雯\",\"idCode\":\"DED63B92D461BCC909DA20B684CD7D35\"}"
+                    },
+                    {
+                        "type": "抢答",
+                        "startTime": 1711612674000,
+                        "endTime": 1711612974000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=241157593&clazzid=93256569&cpi=336581293&ismooc2=1",
+                        "title": "杭电6351剪枝思路？",
+                        "briefContent": "杭电6351剪枝思路？"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1711611690000,
+                        "endTime": 1711611990000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=241157593&clazzid=93256569&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "通知",
+                        "startTime": 1711015536000,
+                        "endTime": 1711101936000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/9CA31280D79B73CB390710F83E45E3D0/getNoticeDetail",
+                        "title": "有人书掉了《【24春】程序设计竞赛算法》",
+                        "briefContent": "{\"creatorRealName\":\"于海雯\",\"idCode\":\"9CA31280D79B73CB390710F83E45E3D0\"}"
+                    },
+                    {
+                        "type": "抢答",
+                        "startTime": 1711013021000,
+                        "endTime": 1711013321000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=241157593&clazzid=93256569&cpi=336581293&ismooc2=1",
+                        "title": "求解最长递增子序列问题的思路？",
+                        "briefContent": "求解最长递增子序列问题的思路？"
+                    },
+                    {
+                        "type": "抢答",
+                        "startTime": 1711009309000,
+                        "endTime": 1711009609000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=241157593&clazzid=93256569&cpi=336581293&ismooc2=1",
+                        "title": "杭电5616解题思路？",
+                        "briefContent": "杭电5616解题思路？"
+                    },
+                    {
+                        "type": "抢答",
+                        "startTime": 1711008935000,
+                        "endTime": 1711009235000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=241157593&clazzid=93256569&cpi=336581293&ismooc2=1",
+                        "title": "洛谷2677能被优化吗？",
+                        "briefContent": "洛谷2677能被优化吗？"
+                    },
+                    {
+                        "type": "抢答",
+                        "startTime": 1711008020000,
+                        "endTime": 1711008320000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=241157593&clazzid=93256569&cpi=336581293&ismooc2=1",
+                        "title": "洛谷2677解题思路？",
+                        "briefContent": "洛谷2677解题思路？"
+                    },
+                    {
+                        "type": "抢答",
+                        "startTime": 1711007512000,
+                        "endTime": 1711007812000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=241157593&clazzid=93256569&cpi=336581293&ismooc2=1",
+                        "title": "杭电2021解题思路？",
+                        "briefContent": "杭电2021解题思路？"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1711006823000,
+                        "endTime": 1711007123000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=241157593&clazzid=93256569&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "抢答",
+                        "startTime": 1710409352000,
+                        "endTime": 1710409652000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=241157593&clazzid=93256569&cpi=336581293&ismooc2=1",
+                        "title": "6685解题思路？",
+                        "briefContent": "6685解题思路？"
+                    },
+                    {
+                        "type": "抢答",
+                        "startTime": 1710407345000,
+                        "endTime": 1710407645000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=241157593&clazzid=93256569&cpi=336581293&ismooc2=1",
+                        "title": "2566优化思路？",
+                        "briefContent": "2566优化思路？"
+                    },
+                    {
+                        "type": "抢答",
+                        "startTime": 1710404149000,
+                        "endTime": 1710404449000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=241157593&clazzid=93256569&cpi=336581293&ismooc2=1",
+                        "title": "1205解题思路？",
+                        "briefContent": "1205解题思路？"
+                    },
+                    {
+                        "type": "抢答",
+                        "startTime": 1710402930000,
+                        "endTime": 1710403230000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=241157593&clazzid=93256569&cpi=336581293&ismooc2=1",
+                        "title": "1005解题规律？",
+                        "briefContent": "1005解题规律？"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1710402205000,
+                        "endTime": 1710402505000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=241157593&clazzid=93256569&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "抢答",
+                        "startTime": 1709804128000,
+                        "endTime": 1709804428000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=241157593&clazzid=93256569&cpi=336581293&ismooc2=1",
+                        "title": "1021解题思路？",
+                        "briefContent": "1021解题思路？"
+                    },
+                    {
+                        "type": "抢答",
+                        "startTime": 1709801303000,
+                        "endTime": 1709801603000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=241157593&clazzid=93256569&cpi=336581293&ismooc2=1",
+                        "title": "1016解题思路？优化思想？",
+                        "briefContent": "1016解题思路？优化思想？"
+                    },
+                    {
+                        "type": "抢答",
+                        "startTime": 1709800272000,
+                        "endTime": 1709800572000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=241157593&clazzid=93256569&cpi=336581293&ismooc2=1",
+                        "title": "1018解题思路？",
+                        "briefContent": "1018解题思路？"
+                    },
+                    {
+                        "type": "抢答",
+                        "startTime": 1709799490000,
+                        "endTime": 1709799790000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=241157593&clazzid=93256569&cpi=336581293&ismooc2=1",
+                        "title": "1013解题思路？",
+                        "briefContent": "1013解题思路？"
+                    },
+                    {
+                        "type": "抢答",
+                        "startTime": 1709798813000,
+                        "endTime": 1709799113000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=241157593&clazzid=93256569&cpi=336581293&ismooc2=1",
+                        "title": "1001代码问题在哪？",
+                        "briefContent": "1001代码问题在哪？"
+                    },
+                    {
+                        "type": "抢答",
+                        "startTime": 1709797846000,
+                        "endTime": 1709798146000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=241157593&clazzid=93256569&cpi=336581293&ismooc2=1",
+                        "title": "1091哪个对？",
+                        "briefContent": "1091哪个对？"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1709797181000,
+                        "endTime": 1709797361000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=241157593&clazzid=93256569&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "抢答",
+                        "startTime": 1709200933000,
+                        "endTime": 1709201233000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=241157593&clazzid=93256569&cpi=336581293&ismooc2=1",
+                        "title": "1089哪个代码对？",
+                        "briefContent": "1089哪个代码对？"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1709192582000,
+                        "endTime": 1709192882000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=241157593&clazzid=93256569&cpi=336581293&ismooc2=1"
+                    }
+                ],
+                "homework": [],
+                "exam": [],
+                "courseCount": -1,
+                "courseFinish": -1,
+                "specialValue": {
+                    "encs": {
+                        "enc": "4f8ff9070773cdc4ade1444f73fa7de9",
+                        "oldenc": "02ec03760883728c04c78c0e6c7b11ef",
+                        "openc": "1bc0bef11dbde74639cd1739d75ac938",
+                        "examenc": "3abf687da3369866c31b93c58459bbe2",
+                        "workenc": "73b5a7653d604cea23ab3d7a0c73eaec"
+                    },
+                    "cpi": "336581293"
+                }
+            },
+            {
+                "name": "【24春】面向对象程序设计（Java）实验",
+                "teacher": "任燕",
+                "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=241154758&clazzid=93248647&cpi=336581293&ismooc2=1",
+                "classId": 93248647,
+                "courseId": 241154758,
+                "startTime": 1708992000000,
+                "endTime": 1772150400000,
+                "finished": false,
+                "events": [
+                    {
+                        "type": "问卷",
+                        "startTime": 1718170753000,
+                        "endTime": "",
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=241154758&clazzid=93248647&cpi=336581293&ismooc2=1",
+                        "title": "2024面向对象程序设计实验（Java）问卷调查",
+                        "briefContent": "2024面向对象程序设计实验（Java）问卷调查"
+                    },
+                    {
+                        "type": "通知",
+                        "startTime": 1718715804000,
+                        "endTime": 1718802204000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/D7EA5E1D84E709E31AF0DC4057EAC3B1/getNoticeDetail",
+                        "title": "实验报告需完善同学名单",
+                        "briefContent": "{\"creatorRealName\":\"任燕\",\"idCode\":\"D7EA5E1D84E709E31AF0DC4057EAC3B1\"}"
+                    },
+                    {
+                        "type": "通知",
+                        "startTime": 1718240830000,
+                        "endTime": 1718327230000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/0C83D3A3AEAF446AF6AF3CF1D25ED7B3/getNoticeDetail",
+                        "title": "提交实验报告",
+                        "briefContent": "{\"creatorRealName\":\"任燕\",\"idCode\":\"0C83D3A3AEAF446AF6AF3CF1D25ED7B3\"}"
+                    },
+                    {
+                        "type": "通知",
+                        "startTime": 1717658968000,
+                        "endTime": 1717745368000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/04A86BEE038C8D691AF0DC4057EAC3B1/getNoticeDetail",
+                        "title": "实验报告注意事项",
+                        "briefContent": "{\"creatorRealName\":\"任燕\",\"idCode\":\"04A86BEE038C8D691AF0DC4057EAC3B1\"}"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1716963687000,
+                        "endTime": 1716964047000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=241154758&clazzid=93248647&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1716362268000,
+                        "endTime": 1716362568000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=241154758&clazzid=93248647&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1715757256000,
+                        "endTime": 1715758216000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=241154758&clazzid=93248647&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1715150980000,
+                        "endTime": 1715152780000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=241154758&clazzid=93248647&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "通知",
+                        "startTime": 1713919721000,
+                        "endTime": 1714006121000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/FE5D1FD3D596758FB969CC3AE410A0FD/getNoticeDetail",
+                        "title": "面向对象程序设计理论以及实验期中考试",
+                        "briefContent": "{\"creatorRealName\":\"任燕\",\"idCode\":\"FE5D1FD3D596758FB969CC3AE410A0FD\"}"
+                    },
+                    {
+                        "type": "通知",
+                        "startTime": 1713745505000,
+                        "endTime": 1713831905000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/A83FC6C1057F56C609DA20B684CD7D35/getNoticeDetail",
+                        "title": "数据结构期中考试通知",
+                        "briefContent": "{\"creatorRealName\":\"任燕\",\"idCode\":\"A83FC6C1057F56C609DA20B684CD7D35\"}"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1713333627000,
+                        "endTime": 1713334227000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=241154758&clazzid=93248647&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1712733404000,
+                        "endTime": 1712735204000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=241154758&clazzid=93248647&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "通知",
+                        "startTime": 1712111748000,
+                        "endTime": 1712198148000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/B5C4303DDCAE38417930AAA6FC4C4A98/getNoticeDetail",
+                        "title": "《【24春】面向对象程序设计（Java）实验》",
+                        "briefContent": "{\"creatorRealName\":\"任燕\",\"idCode\":\"B5C4303DDCAE38417930AAA6FC4C4A98\"}"
+                    },
+                    {
+                        "type": "通知",
+                        "startTime": 1712040146000,
+                        "endTime": 1712126546000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/C41BC9F82F43E72C09DA20B684CD7D35/getNoticeDetail",
+                        "title": "《【24春】面向对象程序设计（Java）实验》",
+                        "briefContent": "{\"creatorRealName\":\"任燕\",\"idCode\":\"C41BC9F82F43E72C09DA20B684CD7D35\"}"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1712125259000,
+                        "endTime": 1712125319000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=241154758&clazzid=93248647&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "通知",
+                        "startTime": 1711516985000,
+                        "endTime": 1711603385000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/AA7F52D182685A257930AAA6FC4C4A98/getNoticeDetail",
+                        "title": "实验报告模板",
+                        "briefContent": "{\"creatorRealName\":\"任燕\",\"idCode\":\"AA7F52D182685A257930AAA6FC4C4A98\"}"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1711523115000,
+                        "endTime": 1711524015000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=241154758&clazzid=93248647&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1710309208000,
+                        "endTime": 1710309808000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=241154758&clazzid=93248647&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "通知",
+                        "startTime": 1709696629000,
+                        "endTime": 1709783029000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/D49CAD627D43F0D7390710F83E45E3D0/getNoticeDetail",
+                        "title": "《【24春】面向对象程序设计（Java）实验》",
+                        "briefContent": "{\"creatorRealName\":\"任燕\",\"idCode\":\"D49CAD627D43F0D7390710F83E45E3D0\"}"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1709707427000,
+                        "endTime": 1709707727000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=241154758&clazzid=93248647&cpi=336581293&ismooc2=1"
+                    }
+                ],
+                "homework": [
+                    {
+                        "url": "https://mooc1.chaoxing.com/mooc-ans/mooc2/work/task?courseId=241154758&classId=93248647&cpi=336581293&workId=35320360&answerId=53596156&enc=cc216d50050b2728dc0ad42d7f967e65",
+                        "title": "20240529实验",
+                        "remainTime": "",
+                        "status": "待批阅"
+                    },
+                    {
+                        "url": "https://mooc1.chaoxing.com/mooc-ans/mooc2/work/task?courseId=241154758&classId=93248647&cpi=336581293&workId=35169271&answerId=53569440&enc=23f44080f9d3dc9546fc2f7ae657ebfa",
+                        "title": "20240522实验",
+                        "remainTime": "",
+                        "status": "待批阅"
+                    },
+                    {
+                        "url": "https://mooc1.chaoxing.com/mooc-ans/mooc2/work/task?courseId=241154758&classId=93248647&cpi=336581293&workId=34993994&answerId=53541082&enc=a33fecd4319d53ca8cbb23f3054a4e21",
+                        "title": "20240515实验",
+                        "remainTime": "",
+                        "status": "待批阅"
+                    },
+                    {
+                        "url": "https://mooc1.chaoxing.com/mooc-ans/mooc2/work/task?courseId=241154758&classId=93248647&cpi=336581293&workId=34822327&answerId=53511810&enc=00fdc235adf17c2dfb56d5173d6167a5",
+                        "title": "20240508实验",
+                        "remainTime": "",
+                        "status": "待批阅"
+                    },
+                    {
+                        "url": "https://mooc1.chaoxing.com/mooc-ans/mooc2/work/task?courseId=241154758&classId=93248647&cpi=336581293&workId=34328972&answerId=53450662&enc=ec67518933046b0329b3b93fdef8066f",
+                        "title": "20240417实验",
+                        "remainTime": "",
+                        "status": "待批阅"
+                    },
+                    {
+                        "url": "https://mooc1.chaoxing.com/mooc-ans/mooc2/work/task?courseId=241154758&classId=93248647&cpi=336581293&workId=34114113&answerId=53426645&enc=ea44ef6941d2e1b68bbec2088d647a92",
+                        "title": "20240410实验",
+                        "remainTime": "",
+                        "status": "待批阅"
+                    },
+                    {
+                        "url": "https://mooc1.chaoxing.com/mooc-ans/mooc2/work/task?courseId=241154758&classId=93248647&cpi=336581293&workId=33905521&answerId=53405227&enc=4e0d922ab20bf32219c1ab089ba5070a",
+                        "title": "20240403实验",
+                        "remainTime": "",
+                        "status": "待批阅"
+                    },
+                    {
+                        "url": "https://mooc1.chaoxing.com/mooc-ans/mooc2/work/task?courseId=241154758&classId=93248647&cpi=336581293&workId=33665190&answerId=53377910&enc=d47e87c40e72b9c6402e4734ad82cfee",
+                        "title": "20240327实验",
+                        "remainTime": "",
+                        "status": "待批阅"
+                    },
+                    {
+                        "url": "https://mooc1.chaoxing.com/mooc-ans/mooc2/work/task?courseId=241154758&classId=93248647&cpi=336581293&workId=33339556&answerId=53349464&enc=e209580b44455cc861f32fa18e217802",
+                        "title": "20240320实验",
+                        "remainTime": "",
+                        "status": "待批阅"
+                    }
+                ],
+                "exam": [],
+                "courseCount": -1,
+                "courseFinish": -1,
+                "specialValue": {
+                    "encs": {
+                        "enc": "3bc3bc8828c737a88b15c42f114f14cc",
+                        "oldenc": "6dc7bd9fdde275b6c35cc4118827fc70",
+                        "openc": "f38ab9165e8c2c29b6b1d4dc2f244c4f",
+                        "examenc": "f7c2180ef14d16031e38ea5d38404528",
+                        "workenc": "62c541777c19537d75eedd231e8172ac"
+                    },
+                    "cpi": "336581293"
+                }
+            },
+            {
+                "name": "【24春】面向对象程序设计（Java）",
+                "teacher": "任燕",
+                "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=241154728&clazzid=93248562&cpi=336581293&ismooc2=1",
+                "classId": 93248562,
+                "courseId": 241154728,
+                "startTime": 1708992000000,
+                "endTime": 1772150400000,
+                "finished": false,
+                "events": [
+                    {
+                        "type": "问卷",
+                        "startTime": 1718170738000,
+                        "endTime": "",
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=241154728&clazzid=93248562&cpi=336581293&ismooc2=1",
+                        "title": "2024春面向对象程序设计（Java）问卷调查",
+                        "briefContent": "2024春面向对象程序设计（Java）问卷调查"
+                    },
+                    {
+                        "type": "通知",
+                        "startTime": 1718715867000,
+                        "endTime": 1718802267000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/24774B46A68C73BF70CE8776F735574C/getNoticeDetail",
+                        "title": "跟班同学通知",
+                        "briefContent": "{\"creatorRealName\":\"任燕\",\"idCode\":\"24774B46A68C73BF70CE8776F735574C\"}"
+                    },
+                    {
+                        "type": "通知",
+                        "startTime": 1718241084000,
+                        "endTime": 1718327484000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/5ECBBF50DFB02DB909DA20B684CD7D35/getNoticeDetail",
+                        "title": "20240606作业",
+                        "briefContent": "{\"creatorRealName\":\"任燕\",\"idCode\":\"5ECBBF50DFB02DB909DA20B684CD7D35\"}"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1717399687000,
+                        "endTime": 1717400467000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=241154728&clazzid=93248562&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1716795454000,
+                        "endTime": 1716795874000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=241154728&clazzid=93248562&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1716190913000,
+                        "endTime": 1716191213000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=241154728&clazzid=93248562&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1716190582000,
+                        "endTime": 1716191182000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=241154728&clazzid=93248562&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1715585105000,
+                        "endTime": 1715586065000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=241154728&clazzid=93248562&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1714375683000,
+                        "endTime": 1714376523000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=241154728&clazzid=93248562&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "通知",
+                        "startTime": 1713919821000,
+                        "endTime": 1714006221000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/D6136751FB83953E094AA86A52FEBD38/getNoticeDetail",
+                        "title": "面向对象程序设计理论以及实验期中考试",
+                        "briefContent": "{\"creatorRealName\":\"任燕\",\"idCode\":\"D6136751FB83953E094AA86A52FEBD38\"}"
+                    },
+                    {
+                        "type": "通知",
+                        "startTime": 1713745453000,
+                        "endTime": 1713831853000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/D957D4898E7D787309DA20B684CD7D35/getNoticeDetail",
+                        "title": "数据结构期中考试通知",
+                        "briefContent": "{\"creatorRealName\":\"任燕\",\"idCode\":\"D957D4898E7D787309DA20B684CD7D35\"}"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1713770878000,
+                        "endTime": 1713771778000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=241154728&clazzid=93248562&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1713166160000,
+                        "endTime": 1713166880000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=241154728&clazzid=93248562&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1712561197000,
+                        "endTime": 1712562097000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=241154728&clazzid=93248562&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1711953485000,
+                        "endTime": 1711954085000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=241154728&clazzid=93248562&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1711348503000,
+                        "endTime": 1711349043000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=241154728&clazzid=93248562&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1710747301000,
+                        "endTime": 1710747601000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=241154728&clazzid=93248562&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1710139013000,
+                        "endTime": 1710139613000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=241154728&clazzid=93248562&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1709533990000,
+                        "endTime": 1709534530000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=241154728&clazzid=93248562&cpi=336581293&ismooc2=1"
+                    }
+                ],
+                "homework": [],
+                "exam": [],
+                "courseCount": -1,
+                "courseFinish": -1,
+                "specialValue": {
+                    "encs": {
+                        "enc": "7c9a14e6a03b1d909b4f64393e4530ac",
+                        "oldenc": "eb21f16fd0a6f274b4b88e037d21f843",
+                        "openc": "b5a71408c56386df5d316b3c528d1a05",
+                        "examenc": "04220d10512c2f72f380765572f8a0d4",
+                        "workenc": "66019c752dd2b272639d4e736ad0595d"
+                    },
+                    "cpi": "336581293"
+                }
+            },
+            {
+                "name": "【24春】市场调研与数据分析",
+                "teacher": "尧军文",
+                "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=241040330&clazzid=92921134&cpi=336581293&ismooc2=1",
+                "classId": 92921134,
+                "courseId": 241040330,
+                "startTime": 1708905600000,
+                "endTime": 1772064000000,
+                "finished": false,
+                "events": [
+                    {
+                        "type": "通知",
+                        "startTime": 1718588639000,
+                        "endTime": 1718675039000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/2B39673E1C3D14971AF0DC4057EAC3B1/getNoticeDetail",
+                        "title": "通知：本课程成绩已经发布",
+                        "briefContent": "{\"creatorRealName\":\"尧军文\",\"idCode\":\"2B39673E1C3D14971AF0DC4057EAC3B1\"}"
+                    },
+                    {
+                        "type": "通知",
+                        "startTime": 1718422546000,
+                        "endTime": 1718508946000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/5E6F71A7DAA0EF83686F38D7DC10BC72/getNoticeDetail",
+                        "title": "重要通知：期末考试",
+                        "briefContent": "{\"creatorRealName\":\"尧军文\",\"idCode\":\"5E6F71A7DAA0EF83686F38D7DC10BC72\"}"
+                    },
+                    {
+                        "type": "通知",
+                        "startTime": 1718067847000,
+                        "endTime": 1718154247000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/F48093B473C38486D9C204C044A77D4A/getNoticeDetail",
+                        "title": "温馨提醒：请大家不要忘记本课程的在线期末考试",
+                        "briefContent": "{\"creatorRealName\":\"尧军文\",\"idCode\":\"F48093B473C38486D9C204C044A77D4A\"}"
+                    },
+                    {
+                        "type": "通知",
+                        "startTime": 1716776078000,
+                        "endTime": 1716862478000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/94368A5741372635F6AF3CF1D25ED7B3/getNoticeDetail",
+                        "title": "请大家于6月15日完成期末考试",
+                        "briefContent": "{\"creatorRealName\":\"尧军文\",\"idCode\":\"94368A5741372635F6AF3CF1D25ED7B3\"}"
+                    },
+                    {
+                        "type": "通知",
+                        "startTime": 1715564356000,
+                        "endTime": 1715650756000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/35C0E14ABFDCBEF809DA20B684CD7D35/getNoticeDetail",
+                        "title": "请以下同学联系我",
+                        "briefContent": "{\"creatorRealName\":\"尧军文\",\"idCode\":\"35C0E14ABFDCBEF809DA20B684CD7D35\"}"
+                    },
+                    {
+                        "type": "通知",
+                        "startTime": 1715076266000,
+                        "endTime": 1715162666000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/B8AD768275A73418F6AF3CF1D25ED7B3/getNoticeDetail",
+                        "title": "请大家查阅自己的学习情况",
+                        "briefContent": "{\"creatorRealName\":\"尧军文\",\"idCode\":\"B8AD768275A73418F6AF3CF1D25ED7B3\"}"
+                    },
+                    {
+                        "type": "通知",
+                        "startTime": 1714956047000,
+                        "endTime": 1715042447000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/5FDE1BE346E086B41AF0DC4057EAC3B1/getNoticeDetail",
+                        "title": "重要：请未完成视频内容学习的同学于本周完成",
+                        "briefContent": "{\"creatorRealName\":\"尧军文\",\"idCode\":\"5FDE1BE346E086B41AF0DC4057EAC3B1\"}"
+                    },
+                    {
+                        "type": "通知",
+                        "startTime": 1713239168000,
+                        "endTime": 1713325568000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/CB8A26555968F4547930AAA6FC4C4A98/getNoticeDetail",
+                        "title": "本课程将于11周结束，主大家关注自己的学习进度",
+                        "briefContent": "{\"creatorRealName\":\"尧军文\",\"idCode\":\"CB8A26555968F4547930AAA6FC4C4A98\"}"
+                    },
+                    {
+                        "type": "通知",
+                        "startTime": 1712315836000,
+                        "endTime": 1712402236000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/54D24A27EC66F2471AF0DC4057EAC3B1/getNoticeDetail",
+                        "title": "本课程的课件，在学习通的资料里",
+                        "briefContent": "{\"creatorRealName\":\"尧军文\",\"idCode\":\"54D24A27EC66F2471AF0DC4057EAC3B1\"}"
+                    },
+                    {
+                        "type": "通知",
+                        "startTime": 1711181187000,
+                        "endTime": 1711267587000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/09D610569D8B71E3B969CC3AE410A0FD/getNoticeDetail",
+                        "title": "第四周学习提醒",
+                        "briefContent": "{\"creatorRealName\":\"尧军文\",\"idCode\":\"09D610569D8B71E3B969CC3AE410A0FD\"}"
+                    },
+                    {
+                        "type": "通知",
+                        "startTime": 1709918490000,
+                        "endTime": 1710004890000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/1A1AE9A1A8AF0B55B969CC3AE410A0FD/getNoticeDetail",
+                        "title": "Q群说明，加群说明",
+                        "briefContent": "{\"creatorRealName\":\"尧军文\",\"idCode\":\"1A1AE9A1A8AF0B55B969CC3AE410A0FD\"}"
+                    },
+                    {
+                        "type": "通知",
+                        "startTime": 1708962290000,
+                        "endTime": 1709048690000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/00CDAC8F5762B239686F38D7DC10BC72/getNoticeDetail",
+                        "title": "重要：请同学们核实是否误选此课",
+                        "briefContent": "{\"creatorRealName\":\"尧军文\",\"idCode\":\"00CDAC8F5762B239686F38D7DC10BC72\"}"
+                    },
+                    {
+                        "type": "通知",
+                        "startTime": 1708961932000,
+                        "endTime": 1709048332000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/90DE74E640672EABF6AF3CF1D25ED7B3/getNoticeDetail",
+                        "title": "群满时，请加新群",
+                        "briefContent": "{\"creatorRealName\":\"尧军文\",\"idCode\":\"90DE74E640672EABF6AF3CF1D25ED7B3\"}"
+                    },
+                    {
+                        "type": "通知",
+                        "startTime": 1708916683000,
+                        "endTime": 1709003083000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/4F009010D435C3C7390710F83E45E3D0/getNoticeDetail",
+                        "title": "加Q群通知",
+                        "briefContent": "{\"creatorRealName\":\"尧军文\",\"idCode\":\"4F009010D435C3C7390710F83E45E3D0\"}"
+                    }
+                ],
+                "homework": [],
+                "exam": [],
+                "courseCount": -1,
+                "courseFinish": -1,
+                "specialValue": {
+                    "encs": {
+                        "enc": "a77365e033b01935ffef6be77f1a9c83",
+                        "oldenc": "b012bcab5f12ffc10684aef09dfeef08",
+                        "openc": "65f6100d0628a87af5498ffc1989e735",
+                        "examenc": "c5b99a5961a92803c6897d25eba2c34c",
+                        "workenc": "9c74d3cd7e8cfa8d1ef0a28a2f55b384"
+                    },
+                    "cpi": "336581293"
+                }
+            },
+            {
+                "name": "【24春】创新设计概论",
+                "teacher": "李小兵",
+                "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240984630&clazzid=92842924&cpi=336581293&ismooc2=1",
+                "classId": 92842924,
+                "courseId": 240984630,
+                "startTime": 1708905600000,
+                "endTime": 1772064000000,
+                "finished": false,
+                "events": [
+                    {
+                        "type": "签到",
+                        "startTime": 1715775039000,
+                        "endTime": 1715775639000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240984630&clazzid=92842924&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "通知",
+                        "startTime": 1715607600000,
+                        "endTime": 1715694000000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/452ED938854DD6E7F6AF3CF1D25ED7B3/getNoticeDetail",
+                        "title": "《【24春】创新设计概论》5.15日最后见面课",
+                        "briefContent": "{\"creatorRealName\":\"李小兵\",\"idCode\":\"452ED938854DD6E7F6AF3CF1D25ED7B3\"}"
+                    },
+                    {
+                        "type": "通知",
+                        "startTime": 1713702184000,
+                        "endTime": 1713788584000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/AAE37E313E4D61AEF6AF3CF1D25ED7B3/getNoticeDetail",
+                        "title": "《【24春】创新设计概论》4.24见面课",
+                        "briefContent": "{\"creatorRealName\":\"李小兵\",\"idCode\":\"AAE37E313E4D61AEF6AF3CF1D25ED7B3\"}"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1712145576000,
+                        "endTime": 1712146176000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240984630&clazzid=92842924&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1710930502000,
+                        "endTime": 1710932302000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240984630&clazzid=92842924&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "通知",
+                        "startTime": 1710760339000,
+                        "endTime": 1710846739000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/8962651CE4AE5DAA1AF0DC4057EAC3B1/getNoticeDetail",
+                        "title": "《【24春】创新设计概论》第二次见面课通知",
+                        "briefContent": "{\"creatorRealName\":\"李小兵\",\"idCode\":\"8962651CE4AE5DAA1AF0DC4057EAC3B1\"}"
+                    },
+                    {
+                        "type": "通知",
+                        "startTime": 1709524627000,
+                        "endTime": 1709611027000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/22C32EDD487AA85EB969CC3AE410A0FD/getNoticeDetail",
+                        "title": "《【24春】创新设计概论》课程群",
+                        "briefContent": "{\"creatorRealName\":\"李小兵\",\"idCode\":\"22C32EDD487AA85EB969CC3AE410A0FD\"}"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1709204450000,
+                        "endTime": 1709205350000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240984630&clazzid=92842924&cpi=336581293&ismooc2=1"
+                    }
+                ],
+                "homework": [],
+                "exam": [],
+                "courseCount": -1,
+                "courseFinish": -1,
+                "specialValue": {
+                    "encs": {
+                        "enc": "b298af26a542d97e6e43ecc9f187f377",
+                        "oldenc": "dcf5e3e130fd3dabd8a1b0b354c68c6b",
+                        "openc": "9dc03908eeb4118ec89b1fb126dfdeb2",
+                        "examenc": "12e832176231d9bf08d0e3a4a752551b",
+                        "workenc": "ea774380d1d338079d30ce3df6e26414"
+                    },
+                    "cpi": "336581293"
+                }
+            },
+            {
+                "name": "【24春】大学生心理健康指导",
+                "teacher": "梅小峰",
+                "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240917942&clazzid=92553779&cpi=336581293&ismooc2=1",
+                "classId": 92553779,
+                "courseId": 240917942,
+                "startTime": 1708646400000,
+                "endTime": 1771804800000,
+                "finished": false,
+                "events": [
+                    {
+                        "type": "通知",
+                        "startTime": 1717378271000,
+                        "endTime": 1717464671000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/26332B2A251EA2247930AAA6FC4C4A98/getNoticeDetail",
+                        "title": "上交大学生心理健康指导实践课程《成长体验报告》通知",
+                        "briefContent": "{\"creatorRealName\":\"梅小峰\",\"idCode\":\"26332B2A251EA2247930AAA6FC4C4A98\"}"
+                    },
+                    {
+                        "type": "通知",
+                        "startTime": 1715305157000,
+                        "endTime": 1715391557000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/70703E539694B2CBF6AF3CF1D25ED7B3/getNoticeDetail",
+                        "title": "上交大学生心理健康指导实践课程《成长体验报告》通知",
+                        "briefContent": "{\"creatorRealName\":\"梅小峰\",\"idCode\":\"70703E539694B2CBF6AF3CF1D25ED7B3\"}"
+                    },
+                    {
+                        "type": "通知",
+                        "startTime": 1708847614000,
+                        "endTime": 1708934014000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/F442C225A0DE81A4094AA86A52FEBD38/getNoticeDetail",
+                        "title": "通知",
+                        "briefContent": "{\"creatorRealName\":\"梅小峰\",\"idCode\":\"F442C225A0DE81A4094AA86A52FEBD38\"}"
+                    },
+                    {
+                        "type": "通知",
+                        "startTime": 1708847455000,
+                        "endTime": 1708933855000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/F557427CB131073DD9C204C044A77D4A/getNoticeDetail",
+                        "title": "通知",
+                        "briefContent": "{\"creatorRealName\":\"梅小峰\",\"idCode\":\"F557427CB131073DD9C204C044A77D4A\"}"
+                    }
+                ],
+                "homework": [],
+                "exam": [],
+                "courseCount": -1,
+                "courseFinish": -1,
+                "specialValue": {
+                    "encs": {
+                        "enc": "b590b76d34d69b71012438517872134e",
+                        "oldenc": "28839930206fd51e5d808be87bf15d28",
+                        "openc": "f2dfb0ba466bc884e066cf5ad7760896",
+                        "examenc": "b1d97fc8770e43c7b0fd39cc8eb9e65c",
+                        "workenc": "ea5fe479100e0c3891f55083a1e8d5d0"
+                    },
+                    "cpi": "336581293"
+                }
+            },
+            {
+                "name": "【24春】电工电子学实验（Ⅱ）",
+                "teacher": "黎晓贞",
+                "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240906467&clazzid=92518460&cpi=336581293&ismooc2=1",
+                "classId": 92518460,
+                "courseId": 240906467,
+                "startTime": 1708646400000,
+                "endTime": 1771804800000,
+                "finished": false,
+                "events": [
+                    {
+                        "type": "通知",
+                        "startTime": 1718162991000,
+                        "endTime": 1718249391000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/1997B8E11CC171B87930AAA6FC4C4A98/getNoticeDetail",
+                        "title": "《【24春】电工电子学实验（Ⅱ）》",
+                        "briefContent": "{\"creatorRealName\":\"黎晓贞\",\"idCode\":\"1997B8E11CC171B87930AAA6FC4C4A98\"}"
+                    },
+                    {
+                        "type": "通知",
+                        "startTime": 1717066928000,
+                        "endTime": 1717153328000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/8A1BA69C1671B5341AF0DC4057EAC3B1/getNoticeDetail",
+                        "title": "《【24春】电工电子学实验（Ⅱ）》",
+                        "briefContent": "{\"creatorRealName\":\"黎晓贞\",\"idCode\":\"8A1BA69C1671B5341AF0DC4057EAC3B1\"}"
+                    },
+                    {
+                        "type": "通知",
+                        "startTime": 1714181381000,
+                        "endTime": 1714267781000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/2E5515803A058F4F094AA86A52FEBD38/getNoticeDetail",
+                        "title": "《【24春】电工电子学实验（Ⅱ）》",
+                        "briefContent": "{\"creatorRealName\":\"黎晓贞\",\"idCode\":\"2E5515803A058F4F094AA86A52FEBD38\"}"
+                    },
+                    {
+                        "type": "通知",
+                        "startTime": 1712794979000,
+                        "endTime": 1712881379000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/7F96E6729A32A03FB969CC3AE410A0FD/getNoticeDetail",
+                        "title": "《【24春】电工电子学实验（Ⅱ）》",
+                        "briefContent": "{\"creatorRealName\":\"黎晓贞\",\"idCode\":\"7F96E6729A32A03FB969CC3AE410A0FD\"}"
+                    },
+                    {
+                        "type": "通知",
+                        "startTime": 1712371344000,
+                        "endTime": 1712457744000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/0BD411CAEC21E7F209DA20B684CD7D35/getNoticeDetail",
+                        "title": "《【24春】电工电子学实验（Ⅱ）》",
+                        "briefContent": "{\"creatorRealName\":\"黎晓贞\",\"idCode\":\"0BD411CAEC21E7F209DA20B684CD7D35\"}"
+                    },
+                    {
+                        "type": "通知",
+                        "startTime": 1712044346000,
+                        "endTime": 1712130746000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/1D9A032DF5697CDE7930AAA6FC4C4A98/getNoticeDetail",
+                        "title": "《【24春】电工电子学实验（Ⅱ）》",
+                        "briefContent": "{\"creatorRealName\":\"黎晓贞\",\"idCode\":\"1D9A032DF5697CDE7930AAA6FC4C4A98\"}"
+                    },
+                    {
+                        "type": "通知",
+                        "startTime": 1712044325000,
+                        "endTime": 1712130725000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/3A9CF641FFC259A21AF0DC4057EAC3B1/getNoticeDetail",
+                        "title": "《【24春】电工电子学实验（Ⅱ）》",
+                        "briefContent": "{\"creatorRealName\":\"黎晓贞\",\"idCode\":\"3A9CF641FFC259A21AF0DC4057EAC3B1\"}"
+                    }
+                ],
+                "homework": [],
+                "exam": [],
+                "courseCount": -1,
+                "courseFinish": -1,
+                "specialValue": {
+                    "encs": {
+                        "enc": "628f18a4068f3a51df4f7005eb19c91a",
+                        "oldenc": "52a334b1fb1fcc03e242a6cae847a19e",
+                        "openc": "92c521cd839ef79c0f21763f2b24bc33",
+                        "examenc": "346bfa41796244fb194b3a5a05cc214b",
+                        "workenc": "1421dc8987f76a0b3593deaee22ba87d"
+                    },
+                    "cpi": "336581293"
+                }
+            },
+            {
+                "name": "【24春】大学物理（2）",
+                "teacher": "魏昇",
+                "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240905939&clazzid=92516733&cpi=336581293&ismooc2=1",
+                "classId": 92516733,
+                "courseId": 240905939,
+                "startTime": 1708646400000,
+                "endTime": 1771804800000,
+                "finished": false,
+                "events": [],
+                "homework": [],
+                "exam": [],
+                "courseCount": -1,
+                "courseFinish": -1,
+                "specialValue": {
+                    "encs": {
+                        "enc": "a66141792be5b8f42c55297957b88f05",
+                        "oldenc": "d8bda7fe495a611a5b31f22d04c49523",
+                        "openc": "81d6b3a973ae698ef31633bf68037bd9",
+                        "examenc": "4a64e67557904951bfa624def715e9fc",
+                        "workenc": "1121760108102c81468917ccda06bfcb"
+                    },
+                    "cpi": "336581293"
+                }
+            },
+            {
+                "name": "【24春】电工电子学（Ⅱ）",
+                "teacher": "郑朝丹",
+                "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240888655&clazzid=92466322&cpi=336581293&ismooc2=1",
+                "classId": 92466322,
+                "courseId": 240888655,
+                "startTime": 1708560000000,
+                "endTime": 1771718400000,
+                "finished": false,
+                "events": [
+                    {
+                        "type": "通知",
+                        "startTime": 1718749368000,
+                        "endTime": 1718835768000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/AE78CE69768C204A094AA86A52FEBD38/getNoticeDetail",
+                        "title": "各种查漏补缺今天截止",
+                        "briefContent": "{\"creatorRealName\":\"郑朝丹\",\"idCode\":\"AE78CE69768C204A094AA86A52FEBD38\"}"
+                    },
+                    {
+                        "type": "通知",
+                        "startTime": 1718697881000,
+                        "endTime": 1718784281000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/A99575162123FB15686F38D7DC10BC72/getNoticeDetail",
+                        "title": "提交及评阅时间改至今晚截止。",
+                        "briefContent": "{\"creatorRealName\":\"郑朝丹\",\"idCode\":\"A99575162123FB15686F38D7DC10BC72\"}"
+                    },
+                    {
+                        "type": "通知",
+                        "startTime": 1718674455000,
+                        "endTime": 1718760855000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/BA75C259802A958B390710F83E45E3D0/getNoticeDetail",
+                        "title": "互评今天结束，未评阅者扣平时分。",
+                        "briefContent": "{\"creatorRealName\":\"郑朝丹\",\"idCode\":\"BA75C259802A958B390710F83E45E3D0\"}"
+                    },
+                    {
+                        "type": "通知",
+                        "startTime": 1718156977000,
+                        "endTime": 1718243377000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/CB442CFC671E326F390710F83E45E3D0/getNoticeDetail",
+                        "title": "第15章作业截止时间本周六",
+                        "briefContent": "{\"creatorRealName\":\"郑朝丹\",\"idCode\":\"CB442CFC671E326F390710F83E45E3D0\"}"
+                    },
+                    {
+                        "type": "通知",
+                        "startTime": 1717801988000,
+                        "endTime": 1717888388000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/C1DB66D9C6769F5C1AF0DC4057EAC3B1/getNoticeDetail",
+                        "title": "最后一个实验理论相关内容",
+                        "briefContent": "{\"creatorRealName\":\"郑朝丹\",\"idCode\":\"C1DB66D9C6769F5C1AF0DC4057EAC3B1\"}"
+                    },
+                    {
+                        "type": "通知",
+                        "startTime": 1717748912000,
+                        "endTime": 1717835312000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/03B7EA76370B977CF6AF3CF1D25ED7B3/getNoticeDetail",
+                        "title": "期末考试时间",
+                        "briefContent": "{\"creatorRealName\":\"郑朝丹\",\"idCode\":\"03B7EA76370B977CF6AF3CF1D25ED7B3\"}"
+                    },
+                    {
+                        "type": "选人",
+                        "startTime": 1716515159000,
+                        "endTime": 1716515459000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240888655&clazzid=92466322&cpi=336581293&ismooc2=1",
+                        "title": "选人",
+                        "briefContent": "选人"
+                    },
+                    {
+                        "type": "选人",
+                        "startTime": 1715911497000,
+                        "endTime": 1715911797000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240888655&clazzid=92466322&cpi=336581293&ismooc2=1",
+                        "title": "选人",
+                        "briefContent": "选人"
+                    },
+                    {
+                        "type": "通知",
+                        "startTime": 1715336961000,
+                        "endTime": 1715423361000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/D79207C155D27F0ED9C204C044A77D4A/getNoticeDetail",
+                        "title": "明天期中考试",
+                        "briefContent": "{\"creatorRealName\":\"郑朝丹\",\"idCode\":\"D79207C155D27F0ED9C204C044A77D4A\"}"
+                    },
+                    {
+                        "type": "选人",
+                        "startTime": 1715391725000,
+                        "endTime": 1715392025000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240888655&clazzid=92466322&cpi=336581293&ismooc2=1",
+                        "title": "选人",
+                        "briefContent": "选人"
+                    },
+                    {
+                        "type": "通知",
+                        "startTime": 1715246063000,
+                        "endTime": 1715332463000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/63E5B540743DE3FFD9C204C044A77D4A/getNoticeDetail",
+                        "title": "大家记得上下册课本都带着哈！",
+                        "briefContent": "{\"creatorRealName\":\"郑朝丹\",\"idCode\":\"63E5B540743DE3FFD9C204C044A77D4A\"}"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1715311217000,
+                        "endTime": 1715311289000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240888655&clazzid=92466322&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "通知",
+                        "startTime": 1714463110000,
+                        "endTime": 1714549510000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/EAF8F3F3313F9AC67930AAA6FC4C4A98/getNoticeDetail",
+                        "title": "期中考试时间安排调整到5月11日！！！",
+                        "briefContent": "{\"creatorRealName\":\"郑朝丹\",\"idCode\":\"EAF8F3F3313F9AC67930AAA6FC4C4A98\"}"
+                    },
+                    {
+                        "type": "通知",
+                        "startTime": 1714099077000,
+                        "endTime": 1714185477000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/52BD8E8AD03A3DF3F6AF3CF1D25ED7B3/getNoticeDetail",
+                        "title": "期中考试通知！",
+                        "briefContent": "{\"creatorRealName\":\"郑朝丹\",\"idCode\":\"52BD8E8AD03A3DF3F6AF3CF1D25ED7B3\"}"
+                    },
+                    {
+                        "type": "选人",
+                        "startTime": 1714095880000,
+                        "endTime": 1714096180000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240888655&clazzid=92466322&cpi=336581293&ismooc2=1",
+                        "title": "选人",
+                        "briefContent": "选人"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1713496926000,
+                        "endTime": 1713496986000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240888655&clazzid=92466322&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "选人",
+                        "startTime": 1713494560000,
+                        "endTime": 1713494860000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240888655&clazzid=92466322&cpi=336581293&ismooc2=1",
+                        "title": "选人",
+                        "briefContent": "选人"
+                    },
+                    {
+                        "type": "选人",
+                        "startTime": 1713490925000,
+                        "endTime": 1713491225000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240888655&clazzid=92466322&cpi=336581293&ismooc2=1",
+                        "title": "选人",
+                        "briefContent": "选人"
+                    },
+                    {
+                        "type": "通知",
+                        "startTime": 1713007073000,
+                        "endTime": 1713093473000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/B554D85860AE76D009DA20B684CD7D35/getNoticeDetail",
+                        "title": "请大家讨论交流哈",
+                        "briefContent": "{\"creatorRealName\":\"郑朝丹\",\"idCode\":\"B554D85860AE76D009DA20B684CD7D35\"}"
+                    },
+                    {
+                        "type": "通知",
+                        "startTime": 1712969743000,
+                        "endTime": 1713056143000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/AC1B5844287448B1390710F83E45E3D0/getNoticeDetail",
+                        "title": "第三章作业发布",
+                        "briefContent": "{\"creatorRealName\":\"郑朝丹\",\"idCode\":\"AC1B5844287448B1390710F83E45E3D0\"}"
+                    },
+                    {
+                        "type": "选人",
+                        "startTime": 1712456024000,
+                        "endTime": 1712456324000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240888655&clazzid=92466322&cpi=336581293&ismooc2=1",
+                        "title": "选人",
+                        "briefContent": "选人"
+                    },
+                    {
+                        "type": "通知",
+                        "startTime": 1711874481000,
+                        "endTime": 1711960881000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/B13E16C5968131CC1AF0DC4057EAC3B1/getNoticeDetail",
+                        "title": "第2章作业发布，截止到下周周四晚。",
+                        "briefContent": "{\"creatorRealName\":\"郑朝丹\",\"idCode\":\"B13E16C5968131CC1AF0DC4057EAC3B1\"}"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1711682570000,
+                        "endTime": 1711682630000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240888655&clazzid=92466322&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "选人",
+                        "startTime": 1711676601000,
+                        "endTime": 1711676901000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240888655&clazzid=92466322&cpi=336581293&ismooc2=1",
+                        "title": "选人",
+                        "briefContent": "选人"
+                    },
+                    {
+                        "type": "选人",
+                        "startTime": 1711676533000,
+                        "endTime": 1711676833000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240888655&clazzid=92466322&cpi=336581293&ismooc2=1",
+                        "title": "选人",
+                        "briefContent": "选人"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1711077893000,
+                        "endTime": 1711077953000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240888655&clazzid=92466322&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "选人",
+                        "startTime": 1711075357000,
+                        "endTime": 1711075657000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240888655&clazzid=92466322&cpi=336581293&ismooc2=1",
+                        "title": "选人",
+                        "briefContent": "选人"
+                    },
+                    {
+                        "type": "选人",
+                        "startTime": 1711071837000,
+                        "endTime": 1711072137000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240888655&clazzid=92466322&cpi=336581293&ismooc2=1",
+                        "title": "选人",
+                        "briefContent": "选人"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1710472342000,
+                        "endTime": 1710472402000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240888655&clazzid=92466322&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "选人",
+                        "startTime": 1710472012000,
+                        "endTime": 1710472312000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240888655&clazzid=92466322&cpi=336581293&ismooc2=1",
+                        "title": "选人",
+                        "briefContent": "选人"
+                    },
+                    {
+                        "type": "通知",
+                        "startTime": 1709978863000,
+                        "endTime": 1710065263000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/E8BF9335E29F0C28094AA86A52FEBD38/getNoticeDetail",
+                        "title": "作业题打回重新提交",
+                        "briefContent": "{\"creatorRealName\":\"郑朝丹\",\"idCode\":\"E8BF9335E29F0C28094AA86A52FEBD38\"}"
+                    },
+                    {
+                        "type": "通知",
+                        "startTime": 1709902810000,
+                        "endTime": 1709989210000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/A014EBBD7DF8037EB969CC3AE410A0FD/getNoticeDetail",
+                        "title": "第1章作业",
+                        "briefContent": "{\"creatorRealName\":\"郑朝丹\",\"idCode\":\"A014EBBD7DF8037EB969CC3AE410A0FD\"}"
+                    },
+                    {
+                        "type": "选人",
+                        "startTime": 1709862944000,
+                        "endTime": 1709863244000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240888655&clazzid=92466322&cpi=336581293&ismooc2=1",
+                        "title": "选人",
+                        "briefContent": "选人"
+                    }
+                ],
+                "homework": [
+                    {
+                        "url": "https://mooc1.chaoxing.com/mooc-ans/mooc2/work/task?courseId=240888655&classId=92466322&cpi=336581293&workId=35416721&answerId=53236110&enc=f2e5b72f1f8f830379eb6745b388de92",
+                        "title": "第14章作业",
+                        "remainTime": "",
+                        "status": "已完成"
+                    },
+                    {
+                        "url": "https://mooc1.chaoxing.com/mooc-ans/mooc2/work/task?courseId=240888655&classId=92466322&cpi=336581293&workId=33872065&answerId=53051288&enc=2dfd6758f3b42bf94cf54c8273cc63cb",
+                        "title": "第2章作业",
+                        "remainTime": "",
+                        "status": "已完成"
+                    }
+                ],
+                "exam": [],
+                "courseCount": -1,
+                "courseFinish": -1,
+                "specialValue": {
+                    "encs": {
+                        "enc": "8b0b1bf71568470967a4237d4c85f5bd",
+                        "oldenc": "7c1323398f61a126e31a8b2e07fc555a",
+                        "openc": "42a728027d83982fe80942680508700d",
+                        "examenc": "2323522c1fee61e06156d1f14e8712dd",
+                        "workenc": "38f8f4b2b6dc3d4c1b6fcd3b31ce2e30"
+                    },
+                    "cpi": "336581293"
+                }
+            },
+            {
+                "name": "【24春】英语词汇学",
+                "teacher": "饶双燕",
+                "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240880801&clazzid=92443082&cpi=336581293&ismooc2=1",
+                "classId": 92443082,
+                "courseId": 240880801,
+                "startTime": 1708560000000,
+                "endTime": 1771718400000,
+                "finished": false,
+                "events": [
+                    {
+                        "type": "签到",
+                        "startTime": 1718149883000,
+                        "endTime": 1718150183000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240880801&clazzid=92443082&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1716942854000,
+                        "endTime": 1716943334000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240880801&clazzid=92443082&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1716335216000,
+                        "endTime": 1716335516000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240880801&clazzid=92443082&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1715125940000,
+                        "endTime": 1715126240000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240880801&clazzid=92443082&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1712104563000,
+                        "endTime": 1712104863000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240880801&clazzid=92443082&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1709682473000,
+                        "endTime": 1709682773000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240880801&clazzid=92443082&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1709077727000,
+                        "endTime": 1709078027000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240880801&clazzid=92443082&cpi=336581293&ismooc2=1"
+                    }
+                ],
+                "homework": [
+                    {
+                        "url": "https://mooc1.chaoxing.com/mooc-ans/mooc2/work/task?courseId=240880801&classId=92443082&cpi=336581293&workId=35655327&answerId=53597494&enc=b801b1e75d65dbe105209e58e5f9b293",
+                        "title": "词汇练习2",
+                        "remainTime": "",
+                        "status": "已完成"
+                    },
+                    {
+                        "url": "https://mooc1.chaoxing.com/mooc-ans/mooc2/work/task?courseId=240880801&classId=92443082&cpi=336581293&workId=35190589&answerId=53559422&enc=a78b0079a24ff6808819466dad8d5ec9",
+                        "title": "口语视频二",
+                        "remainTime": "",
+                        "status": "已完成"
+                    },
+                    {
+                        "url": "https://mooc1.chaoxing.com/mooc-ans/mooc2/work/task?courseId=240880801&classId=92443082&cpi=336581293&workId=34552370&answerId=53452129&enc=3bfd2c9786c9c11ba252fca99ce45c10",
+                        "title": "口语视频一",
+                        "remainTime": "",
+                        "status": "已完成"
+                    },
+                    {
+                        "url": "https://mooc1.chaoxing.com/mooc-ans/mooc2/work/task?courseId=240880801&classId=92443082&cpi=336581293&workId=33712888&answerId=53322956&enc=d86d6e27678f3cfa390d244828108022",
+                        "title": "词汇练习1",
+                        "remainTime": "",
+                        "status": "已完成"
+                    },
+                    {
+                        "url": "https://mooc1.chaoxing.com/mooc-ans/mooc2/work/task?courseId=240880801&classId=92443082&cpi=336581293&workId=33386528&answerId=53307396&enc=02ec52b79a6ac0dfeb07c727ecb79e19",
+                        "title": "chapter 3(副本)",
+                        "remainTime": "",
+                        "status": "已完成"
+                    },
+                    {
+                        "url": "https://mooc1.chaoxing.com/mooc-ans/mooc2/work/task?courseId=240880801&classId=92443082&cpi=336581293&workId=33045200&answerId=53288359&enc=d1b95d903bac5abb259fdad9e77c3f44",
+                        "title": "chapter 2",
+                        "remainTime": "",
+                        "status": "已完成"
+                    },
+                    {
+                        "url": "https://mooc1.chaoxing.com/mooc-ans/mooc2/work/task?courseId=240880801&classId=92443082&cpi=336581293&workId=32362919&answerId=53274587&enc=bb27edb25ec02c091a41c3ff4aa61c4b",
+                        "title": "Introduction",
+                        "remainTime": "",
+                        "status": "已完成"
+                    }
+                ],
+                "exam": [],
+                "courseCount": -1,
+                "courseFinish": -1,
+                "specialValue": {
+                    "encs": {
+                        "enc": "c0eb12f7ef446c421b32b19019b16c41",
+                        "oldenc": "9f8af63a7340228be33a6c0020058653",
+                        "openc": "2043ce699e222893a018fb731f7fd933",
+                        "examenc": "9979db67f9e7795f5aa7dd51a7f5b844",
+                        "workenc": "aa5389a3b4bb63ad4b955435cf451778"
+                    },
+                    "cpi": "336581293"
+                }
+            },
+            {
+                "name": "【24春】中国近现代史纲要",
+                "teacher": "颜志",
+                "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240880514&clazzid=92442154&cpi=336581293&ismooc2=1",
+                "classId": 92442154,
+                "courseId": 240880514,
+                "startTime": 1708560000000,
+                "endTime": 1771718400000,
+                "finished": false,
+                "events": [
+                    {
+                        "type": "签到",
+                        "startTime": 1717378154000,
+                        "endTime": "",
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240880514&clazzid=92442154&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1716773660000,
+                        "endTime": 1717378127000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240880514&clazzid=92442154&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1716169284000,
+                        "endTime": 1716363343000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240880514&clazzid=92442154&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1715563870000,
+                        "endTime": 1715566993000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240880514&clazzid=92442154&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1714959170000,
+                        "endTime": 1715563822000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240880514&clazzid=92442154&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1714355157000,
+                        "endTime": 1714357570000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240880514&clazzid=92442154&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1713749570000,
+                        "endTime": 1713751370000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240880514&clazzid=92442154&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1713144549000,
+                        "endTime": 1713150760000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240880514&clazzid=92442154&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "选人",
+                        "startTime": 1713149671000,
+                        "endTime": 1713149971000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240880514&clazzid=92442154&cpi=336581293&ismooc2=1",
+                        "title": "选人",
+                        "briefContent": "选人"
+                    },
+                    {
+                        "type": "选人",
+                        "startTime": 1713149477000,
+                        "endTime": 1713149777000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240880514&clazzid=92442154&cpi=336581293&ismooc2=1",
+                        "title": "选人",
+                        "briefContent": "选人"
+                    },
+                    {
+                        "type": "选人",
+                        "startTime": 1713148895000,
+                        "endTime": 1713149195000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240880514&clazzid=92442154&cpi=336581293&ismooc2=1",
+                        "title": "选人",
+                        "briefContent": "选人"
+                    },
+                    {
+                        "type": "选人",
+                        "startTime": 1713148872000,
+                        "endTime": 1713149172000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240880514&clazzid=92442154&cpi=336581293&ismooc2=1",
+                        "title": "选人",
+                        "briefContent": "选人"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1712539873000,
+                        "endTime": 1713144544000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240880514&clazzid=92442154&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "选人",
+                        "startTime": 1711937795000,
+                        "endTime": 1711938095000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240880514&clazzid=92442154&cpi=336581293&ismooc2=1",
+                        "title": "选人",
+                        "briefContent": "选人"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1711934974000,
+                        "endTime": 1711935694000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240880514&clazzid=92442154&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1711330063000,
+                        "endTime": 1711425166000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240880514&clazzid=92442154&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "选人",
+                        "startTime": 1711336284000,
+                        "endTime": 1711336584000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240880514&clazzid=92442154&cpi=336581293&ismooc2=1",
+                        "title": "选人",
+                        "briefContent": "选人"
+                    },
+                    {
+                        "type": "选人",
+                        "startTime": 1711335862000,
+                        "endTime": 1711336162000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240880514&clazzid=92442154&cpi=336581293&ismooc2=1",
+                        "title": "选人",
+                        "briefContent": "选人"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1710725649000,
+                        "endTime": 1710739397000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240880514&clazzid=92442154&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1710120538000,
+                        "endTime": 1710142573000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240880514&clazzid=92442154&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1709515735000,
+                        "endTime": 1710120530000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240880514&clazzid=92442154&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1708911109000,
+                        "endTime": 1708917233000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240880514&clazzid=92442154&cpi=336581293&ismooc2=1"
+                    }
+                ],
+                "homework": [
+                    {
+                        "url": "https://mooc1.chaoxing.com/mooc-ans/mooc2/work/task?courseId=240880514&classId=92442154&cpi=336581293&workId=35342162&answerId=52685601&enc=d3eabb3ae3b1f82fa4f5278e0dcb7cc0",
+                        "title": "第五章作业",
+                        "remainTime": "",
+                        "status": "已完成"
+                    },
+                    {
+                        "url": "https://mooc1.chaoxing.com/mooc-ans/mooc2/work/task?courseId=240880514&classId=92442154&cpi=336581293&workId=34983932&answerId=52647478&enc=03968959e8dc968c1f04037d5cb52949",
+                        "title": "第四章作业",
+                        "remainTime": "",
+                        "status": "已完成"
+                    },
+                    {
+                        "url": "https://mooc1.chaoxing.com/mooc-ans/mooc2/work/task?courseId=240880514&classId=92442154&cpi=336581293&workId=33908030&answerId=52503755&enc=2d1b8ae27197fbe9716a4804f624ab6d",
+                        "title": "第二章作业",
+                        "remainTime": "",
+                        "status": "已完成"
+                    },
+                    {
+                        "url": "https://mooc1.chaoxing.com/mooc-ans/mooc2/work/task?courseId=240880514&classId=92442154&cpi=336581293&workId=33629814&answerId=52466444&enc=126b791cfbc6c44be25618488bc41c72",
+                        "title": "《近现代史纲要》第一章作业",
+                        "remainTime": "",
+                        "status": "已完成"
+                    }
+                ],
+                "exam": [],
+                "courseCount": -1,
+                "courseFinish": -1,
+                "specialValue": {
+                    "encs": {
+                        "enc": "fb34ba88fa2b1c8b21edf2868f9087c9",
+                        "oldenc": "208da72d25fd84e1ab543f0e9ccfd4d1",
+                        "openc": "5071397536c212dd6ae66eb450967d2d",
+                        "examenc": "e617d6ba6356b92455f89804b58bc65d",
+                        "workenc": "9624ac8b799f9116c3a8f0a648d8629d"
+                    },
+                    "cpi": "336581293"
+                }
+            },
+            {
+                "name": "【24春】线性代数",
+                "teacher": "阮小军",
+                "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240806717&clazzid=92237526&cpi=336581293&ismooc2=1",
+                "classId": 92237526,
+                "courseId": 240806717,
+                "startTime": 1707955200000,
+                "endTime": 1771113600000,
+                "finished": false,
+                "events": [
+                    {
+                        "type": "签到",
+                        "startTime": 1717637228000,
+                        "endTime": 1717638188000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240806717&clazzid=92237526&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1717032919000,
+                        "endTime": 1717033519000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240806717&clazzid=92237526&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1716427879000,
+                        "endTime": 1716428779000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240806717&clazzid=92237526&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1715823193000,
+                        "endTime": 1715823793000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240806717&clazzid=92237526&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1715218267000,
+                        "endTime": 1715219167000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240806717&clazzid=92237526&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1714267808000,
+                        "endTime": 1714268648000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240806717&clazzid=92237526&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "选人",
+                        "startTime": 1714009333000,
+                        "endTime": 1714009633000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240806717&clazzid=92237526&cpi=336581293&ismooc2=1",
+                        "title": "选人",
+                        "briefContent": "选人"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1714008522000,
+                        "endTime": 1714009362000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240806717&clazzid=92237526&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1713407393000,
+                        "endTime": 1713407693000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240806717&clazzid=92237526&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1712799309000,
+                        "endTime": 1712799909000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240806717&clazzid=92237526&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "选人",
+                        "startTime": 1711594603000,
+                        "endTime": 1711594903000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240806717&clazzid=92237526&cpi=336581293&ismooc2=1",
+                        "title": "选人",
+                        "briefContent": "选人"
+                    },
+                    {
+                        "type": "选人",
+                        "startTime": 1711590597000,
+                        "endTime": 1711590897000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240806717&clazzid=92237526&cpi=336581293&ismooc2=1",
+                        "title": "选人",
+                        "briefContent": "选人"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1711589264000,
+                        "endTime": 1711590164000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240806717&clazzid=92237526&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "选人",
+                        "startTime": 1710992191000,
+                        "endTime": 1710992491000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240806717&clazzid=92237526&cpi=336581293&ismooc2=1",
+                        "title": "选人",
+                        "briefContent": "选人"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1710991170000,
+                        "endTime": 1710991290000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240806717&clazzid=92237526&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "选人",
+                        "startTime": 1710986155000,
+                        "endTime": 1710986455000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240806717&clazzid=92237526&cpi=336581293&ismooc2=1",
+                        "title": "选人",
+                        "briefContent": "选人"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1710984459000,
+                        "endTime": 1710985359000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240806717&clazzid=92237526&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "选人",
+                        "startTime": 1710386597000,
+                        "endTime": 1710386897000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240806717&clazzid=92237526&cpi=336581293&ismooc2=1",
+                        "title": "选人",
+                        "briefContent": "选人"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1710379994000,
+                        "endTime": 1710380834000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240806717&clazzid=92237526&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1709774893000,
+                        "endTime": 1709775733000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240806717&clazzid=92237526&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "选人",
+                        "startTime": 1709172739000,
+                        "endTime": 1709173039000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240806717&clazzid=92237526&cpi=336581293&ismooc2=1",
+                        "title": "选人",
+                        "briefContent": "选人"
+                    },
+                    {
+                        "type": "签到",
+                        "startTime": 1709170217000,
+                        "endTime": 1709170937000,
+                        "url": "https://mooc1.chaoxing.com/visit/stucoursemiddle?courseid=240806717&clazzid=92237526&cpi=336581293&ismooc2=1"
+                    },
+                    {
+                        "type": "通知",
+                        "startTime": 1708484578000,
+                        "endTime": 1708570978000,
+                        "url": "https://notice.chaoxing.com/pc/course/notice/8DF0E7C7BF4AE09D70CE8776F735574C/getNoticeDetail",
+                        "title": "关于第一周上课的通知",
+                        "briefContent": "{\"creatorRealName\":\"阮小军\",\"idCode\":\"8DF0E7C7BF4AE09D70CE8776F735574C\"}"
+                    }
+                ],
+                "homework": [
+                    {
+                        "url": "https://mooc1.chaoxing.com/mooc-ans/mooc2/work/task?courseId=240806717&classId=92237526&cpi=336581293&workId=35483400&answerId=52664907&enc=dd5e130973564884dbfde5e8820ea810",
+                        "title": "线性代数第十五周作业",
+                        "remainTime": "",
+                        "status": "已完成"
+                    },
+                    {
+                        "url": "https://mooc1.chaoxing.com/mooc-ans/mooc2/work/task?courseId=240806717&classId=92237526&cpi=336581293&workId=35344796&answerId=52646566&enc=cca86bb6bb26cec9d1e14fe0652fe9f9",
+                        "title": "线性代数第十四周作业",
+                        "remainTime": "",
+                        "status": "已完成"
+                    },
+                    {
+                        "url": "https://mooc1.chaoxing.com/mooc-ans/mooc2/work/task?courseId=240806717&classId=92237526&cpi=336581293&workId=35256709&answerId=52623052&enc=8baeee8761f3baeee4d2258e341915b2",
+                        "title": "线性代数第十三周作业",
+                        "remainTime": "",
+                        "status": "已完成"
+                    },
+                    {
+                        "url": "https://mooc1.chaoxing.com/mooc-ans/mooc2/work/task?courseId=240806717&classId=92237526&cpi=336581293&workId=34641880&answerId=52510645&enc=00edd1a13ab28fed27be9bd0e337b257",
+                        "title": "线性代数第九周作业",
+                        "remainTime": "",
+                        "status": "已完成"
+                    },
+                    {
+                        "url": "https://mooc1.chaoxing.com/mooc-ans/mooc2/work/task?courseId=240806717&classId=92237526&cpi=336581293&workId=34334388&answerId=52494443&enc=7336057c44f9afd5e97b7290e0c24b89",
+                        "title": "线性代数第八周作业（提交图片必须写出计算过程）",
+                        "remainTime": "",
+                        "status": "已完成"
+                    },
+                    {
+                        "url": "https://mooc1.chaoxing.com/mooc-ans/mooc2/work/task?courseId=240806717&classId=92237526&cpi=336581293&workId=34220927&answerId=52470402&enc=46812e8e76e8a5a5ff1af564b8402000",
+                        "title": "线性代数第六周作业（提交图片必须写出计算过程）",
+                        "remainTime": "",
+                        "status": "已完成"
+                    },
+                    {
+                        "url": "https://mooc1.chaoxing.com/mooc-ans/mooc2/work/task?courseId=240806717&classId=92237526&cpi=336581293&workId=33275503&answerId=52412020&enc=52a5e3400ee442ceef926cf7bd3c2d1e",
+                        "title": "线性代数第四周作业",
+                        "remainTime": "",
+                        "status": "已完成"
+                    },
+                    {
+                        "url": "https://mooc1.chaoxing.com/mooc-ans/mooc2/work/task?courseId=240806717&classId=92237526&cpi=336581293&workId=32943285&answerId=52400228&enc=3f6d52260bb79f78b1d7a8439880a7a6",
+                        "title": "第三周线性代数作业",
+                        "remainTime": "",
+                        "status": "已完成"
+                    },
+                    {
+                        "url": "https://mooc1.chaoxing.com/mooc-ans/mooc2/work/task?courseId=240806717&classId=92237526&cpi=336581293&workId=32574021&answerId=52380158&enc=a05dfe88bc90e77db7b5a5844644c0cb",
+                        "title": "线性代数第二周作业",
+                        "remainTime": "",
+                        "status": "已完成"
+                    },
+                    {
+                        "url": "https://mooc1.chaoxing.com/mooc-ans/mooc2/work/task?courseId=240806717&classId=92237526&cpi=336581293&workId=32271486&answerId=52365982&enc=429e83fbdd9d4169719b37f72190d151",
+                        "title": "线性代数第一周作业",
+                        "remainTime": "",
+                        "status": "已完成"
+                    }
+                ],
+                "exam": [],
+                "courseCount": -1,
+                "courseFinish": -1,
+                "specialValue": {
+                    "encs": {
+                        "enc": "f20edfb602c0f8f9c23384af69eccdea",
+                        "oldenc": "8877b030f105297abc1b54b33b28d3d3",
+                        "openc": "8dbcf904a657b93ac498a946f8f84640",
+                        "examenc": "d96e4b2a7c744c35cf28f9507bbc9e33",
+                        "workenc": "7653e9a571ade550c7216d5c81825bfa"
                     },
                     "cpi": "336581293"
                 }

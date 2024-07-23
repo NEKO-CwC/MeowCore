@@ -1,4 +1,4 @@
-import axios from "axios"
+import axios, { AxiosResponse } from "axios"
 import * as fs from "fs/promises"
 import { onceRedirectRequest, retryRequests } from "../util/index.ts"
 import {
@@ -115,7 +115,7 @@ export const getSpecialValue = async (course: Course, user: User): Promise<Speci
     const { url } = course
     
     console.log(`${course.name}当前课程正在执行`)
-    const { data } : { data : string} = await onceRedirectRequest(axios.get, url, {
+    const { data } : { data : string} = await retryRequests(async () => onceRedirectRequest(axios.get, url, {
         maxRedirects: 0,
         headers: {
             Origin: "https://mooc1.chaoxing.com",
@@ -131,8 +131,7 @@ export const getSpecialValue = async (course: Course, user: User): Promise<Speci
             Cookie: `${generateCookieString(user.xxt.cookie.chaoxing)};${generateCookieString(user.xxt.cookie.mooc)}`,
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
         },
-    })
-
+    }))
     return parseSpecialValue(data)
 }
 
@@ -258,39 +257,20 @@ export const downloadAttachment = async (attachment: CourseEventAttachment, user
 export const getCourseEvents = async (course: Course, user: User): Promise<[CourseEvent[], CollegeCookie]> => {
     const url = `https://mobilelearn.chaoxing.com/v2/apis/active/student/activelist?classId=${course.classId}&courseId=${course.courseId}&fid=${user.xxt.cookie.chaoxing.fid}`
 
-    let attempts = 0
-    let data
+    const { data } = await retryRequests(() => axios.get(url, generateConfig({
+        Cookie: `${generateCookieString(user.xxt.cookie.chaoxing)};${generateCookieString(user.xxt.cookie.mooc)}`,
+    })))
 
-    do {
-        try {
-            const response = await axios.get(url, generateConfig({
-                Cookie: `${generateCookieString(user.xxt.cookie.chaoxing)};${generateCookieString(user.xxt.cookie.mooc)}`,
-            }))
-            data = response.data
-    
-            if (data) {
-                break
+    const res = (data.data.activeList as []).reduce(
+        (prev: CourseEvent[], raw: rawEvent): CourseEvent[] => {
+            const localRes = formatCourseEvent(raw)
+            if (!localRes.url) {
+                localRes.url = course.url
             }
-        } catch (error) {
-            if (axios.isAxiosError(error)) {
-                console.log(error)
-                throw error
-            } else {
-                throw new Error("未知错误")
-            }
-        }
-    
-        attempts += 1
-        console.warn(`getCourseEvents 第 ${attempts} 次尝试失败`)
-    
-        if (attempts >= 10) {
-            throw new Error("达到最大重试次数")
-        }
-    } while (!data)
-
-    console.log(data.data.activeList)
-
-    const res = data.data.activeList.reduce((prev: CourseEvent[], raw: rawEvent): CourseEvent[] => [...prev, formatCourseEvent(raw)], [] as CourseEvent[])
+            return [...prev, localRes]
+        },
+    [] as CourseEvent[],
+    )
 
     return [res, user.xxt.cookie]
 }
@@ -298,13 +278,11 @@ export const getCourseEvents = async (course: Course, user: User): Promise<[Cour
 export const getCourseHomework = async (course: Course, user: User): Promise<[CourseHomework[], CollegeCookie]> => {
     const url = `https://mooc1.chaoxing.com/mooc2/work/list?courseId=${course.courseId}&classId=${course.classId}&status=2&enc=${course.specialValue?.encs.workenc}&cpi=${course.specialValue?.cpi}`
 
-    const { data } = await axios.get(url, generateConfig({
+    const { data } = await retryRequests(async () => axios.get(url, generateConfig({
         Host: "mooc1.chaoxing.com",
         Referer: "https://mooc2-ans.chaoxing.com/mooc2-ans/mycourse/stu?",
         Cookie: `${generateCookieString(user.xxt.cookie.chaoxing)};${generateCookieString(user.xxt.cookie.mooc)}`,
-    }))
-
-    console.log(data)
+    })))
 
     const res = parseHomeworkHTML(data)
 
@@ -312,8 +290,8 @@ export const getCourseHomework = async (course: Course, user: User): Promise<[Co
 }
 
 export const initCourseInfo = async (course: Course, user: User): Promise<[Course, CollegeCookie]> => {
-    const [resEvent] = await retryRequests<[CourseEvent[], CollegeCookie]>(() => getCourseEvents(course, user))
-    const [resHomework] = await retryRequests<[CourseHomework[], CollegeCookie]>(() => getCourseHomework(course, user))
+    const [resEvent] = await getCourseEvents(course, user)
+    const [resHomework] = await getCourseHomework(course, user)
 
     course.events = resEvent
     course.homework = resHomework

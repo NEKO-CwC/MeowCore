@@ -36,19 +36,26 @@ export const defaultErrorDeal = (error: any, attempt: number, cause: any) => {
         // eslint-disable-next-line no-return-assign
         return attempt += 1
     } 
+    if (error.status === 202) {
+        throw new Error("被风控了，一会再试试")
+    }
     throw new Error(`未知错误: ${error}`, { cause })
 }
 
 export const retryRequests = async <T>(
-    callback: () => Promise<T> | T,
+    callback: () => Promise<AxiosResponse<any, any>>,
     errorDeal: (error: any, attempt: number, cause?: any) => number = defaultErrorDeal,
     maxTryTimes = 10,
     delay = 1000,
-): Promise<T> => {
+): Promise<AxiosResponse<any, any>> => {
     let attempt = 0
     while (attempt < maxTryTimes) {
         try {
-            return await callback()
+            const res = await callback()
+            if (res.status === 202) {
+                throw res
+            }
+            return res
         } catch (error) {
             attempt = errorDeal(error, attempt, callback)
         }

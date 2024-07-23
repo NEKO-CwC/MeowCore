@@ -4,6 +4,8 @@ import {
     Course, CourseEventAttachment, CourseHomework, CourseHomeworkDetail, SpecialValue, 
 } from "../interface"
 
+// export const 
+
 export const parseCourseHTML = (courseHTML: string): Course[] => {
     const $ = cheerio.load(courseHTML)
     const courses: Course[] = []
@@ -82,13 +84,14 @@ export const parseHomeworkHTML = (html: string): CourseHomework[] => {
     const $ = cheerio.load(html)
     const res:CourseHomework[] = []
 
+    console.log(html)
+
     if ($("title").text() !== "作业列表") {
         throw new Error("请求返回错误，没有正确获取作业列表")
     }
 
     $("li[onClick='goTask(this);']").each((_, element) => {
         const homeworkElement = $(element)
-        console.log("🚀 ~ $ ~ homeworkElement:", homeworkElement.html())
         
         const url = homeworkElement.attr("data")
         const title = homeworkElement.find(".overHidden2").text()
