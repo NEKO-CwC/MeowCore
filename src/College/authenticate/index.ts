@@ -1,7 +1,6 @@
-import axios, { head } from "axios"
+import axios from "axios"
 import { CookieJar, Cookie } from "tough-cookie"
-import { generateConfig, generateCookieString, updateCookie } from "../../util/requests.ts"
-import { CollegeCookie } from "../interface.ts"
+import { generateConfig, generateCookieString, updateCookie } from "../../util/requests"
 
 export const getCookie = async (): Promise<Cookie[]> => {
     const url = "https://i.chaoxing.com"
@@ -45,7 +44,7 @@ export const initMoocCookie = async (cookie: Record<string, string>): Promise<Re
     const url = "https://mooc2-ans.chaoxing.com/mooc2-ans/api/workTestPendingNew"
 
     const {
-        status, statusText, headers, data,
+        headers,
     } = await axios.post(url, "classIds=", generateConfig(
         {
             Accept: "*/*",
@@ -53,11 +52,11 @@ export const initMoocCookie = async (cookie: Record<string, string>): Promise<Re
             Host: "mooc2-ans.chaoxing.com",
             "Sec-Fetch-Mode": "cors",
             "Sec-Fetch-Site": "same-origin",
-            "Content-Length": Buffer.byteLength("classIds=", "utf-8"),
+            "Content-Length": Buffer.byteLength("classIds=", "utf-8").toString(),
         },
     ))
 
-    const moocCookie = updateCookie({}, headers["set-cookie"], "https://mooc2-ans.chaoxing.com")
+    const moocCookie = updateCookie({}, headers["set-cookie"] as [], "https://mooc2-ans.chaoxing.com")
 
     return moocCookie
 }

@@ -1,10 +1,11 @@
 {
-	"name": "meowcore",
+	"name": "meowcore-college",
 	"version": "1.0.0",
-	"description": "This package serves as the core API separation version for MeowBot, another GitHub repository. It provides essential API functionalities for MeowBot's operations, enabling modular and maintainable code architecture.",
+	"description": "This package serves as the core API separation version for MeowBot-College, another GitHub repository. It provides essential API functionalities for MeowBot's operations, enabling modular and maintainable code architecture.",
 	"main": "./dist/index.cjs",
 	"module": "./dist/index.mjs",
 	"types": "./dist/index.d.ts",
+	"typings": "./dist/index.d.ts",
 	"type": "module",
 	"exports": {
 		"require": "./dist/index.cjs",
@@ -27,6 +28,8 @@
 		"eslint-plugin-import": "2.29.1",
 		"nodemon": "^3.1.4",
 		"pkgroll": "^2.4.1",
+		"rollup": "^4.19.0",
+		"rollup-plugin-dts": "^6.1.1",
 		"ts-node": "^10.9.2",
 		"tsconfig-paths": "^4.2.0",
 		"typescript": "^5.5.3"

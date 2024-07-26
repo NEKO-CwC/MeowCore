@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import axios, { AxiosRequestConfig, AxiosResponse } from "axios"
 import * as fs from "fs/promises"
 
@@ -42,7 +43,7 @@ export const defaultErrorDeal = (error: any, attempt: number, cause: any) => {
     throw new Error(`未知错误: ${error}`, { cause })
 }
 
-export const retryRequests = async <T>(
+export const retryRequests = async (
     callback: () => Promise<AxiosResponse<any, any>>,
     errorDeal: (error: any, attempt: number, cause?: any) => number = defaultErrorDeal,
     maxTryTimes = 10,

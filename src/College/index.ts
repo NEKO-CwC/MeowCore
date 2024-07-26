@@ -1,10 +1,10 @@
-import axios, { AxiosResponse } from "axios"
+import axios from "axios"
 import * as fs from "fs/promises"
-import { onceRedirectRequest, retryRequests } from "../util/index.ts"
+import { onceRedirectRequest, retryRequests } from "../util/index"
 import {
     generateConfig, generateCookieString, updateCookie, 
-} from "../util/requests.ts"
-import { encryptByAES } from "./chaoxing/crypto.ts"
+} from "../util/requests"
+import { encryptByAES } from "./chaoxing/crypto"
 import {
     ChaoxingUser,
     CollegeCookie, Course, CourseEvent, CourseEventAttachment,
@@ -15,12 +15,12 @@ import {
     rawEvent,
     SpecialValue,
     User,
-} from "./interface.ts"
-import { formatCourseEventAttachment, formatCourseEvent } from "./format/json.ts"
+} from "./interface"
+import { formatCourseEventAttachment, formatCourseEvent } from "./format/json"
 import {
     parseCourseHTML, parseHomeworkDetailHTML, parseHomeworkHTML, parseSpecialValue, 
-} from "./format/html.ts"
-import { CONFIG_MODE_SIMPLE, CONFIG_MODE_STRICT } from "./constants.ts"
+} from "./format/html"
+import { CONFIG_MODE_SIMPLE, CONFIG_MODE_STRICT } from "./constants"
 
 const transferKey = "u2oh6Vu^HWe4_AES"
 
